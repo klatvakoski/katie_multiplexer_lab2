@@ -282,3 +282,5 @@ run -all
 # ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/lab2_kltb.sv(43)
 #    Time: 16710 us  Iteration: 0  Instance: /lab2_kltb
 # Break in Module lab2_kltb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/lab2_kltb.sv line 43
+# End time: 15:47:52 on Sep 12,2026, Elapsed time: 0:16:34
+# Errors: 3, Warnings: 2

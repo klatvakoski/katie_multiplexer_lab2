@@ -8,7 +8,7 @@
         <Message>
             <ID>35901188</ID>
             <Severity>128</Severity>
-            <Dynamic>../source/impl_1/lab2_kl.sv(14): </Dynamic>
+            <Dynamic>../source/impl_1/lab2_kl.sv(14):</Dynamic>
             <Dynamic>WIDTH</Dynamic>
             <Navigation>../source/impl_1/lab2_kl.sv</Navigation>
             <Navigation>14</Navigation>
@@ -16,7 +16,7 @@
         <Message>
             <ID>35901072</ID>
             <Severity>4096</Severity>
-            <Dynamic>../source/impl_1/lab2_kl.sv(39): </Dynamic>
+            <Dynamic>../source/impl_1/lab2_kl.sv(39):</Dynamic>
             <Dynamic>module</Dynamic>
             <Navigation>../source/impl_1/lab2_kl.sv</Navigation>
             <Navigation>39</Navigation>
