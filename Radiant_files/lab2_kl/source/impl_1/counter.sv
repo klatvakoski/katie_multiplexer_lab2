@@ -1,5 +1,5 @@
-`timescale 1 ns/1 ns
-module counter #(parameter MAX_COUNT = 120000, parameter WIDTH = 17)(
+`timescale 1 us/1 ns
+module counter #(parameter MAX_COUNT = 120000, parameter WIDTH = 18)(
 	input logic reset, 
 	input logic enable,
 	input logic int_osc,
