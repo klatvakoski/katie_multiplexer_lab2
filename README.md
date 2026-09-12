@@ -1,1 +1,1 @@
-Setting up two transistors to use one seven-segment module to control two seven-segment LEDs
+Setting up two transistors to use one seven-segment module to control two seven-segment LEDs. Additionally controlling a keypad. 
