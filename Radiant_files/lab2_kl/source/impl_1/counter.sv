@@ -1,34 +1,28 @@
 `timescale 1 ns/1 ns
-module counter #(parameter p = 5000000, parameter w = 25)(
+module counter #(parameter MAX_COUNT = 120000, parameter WIDTH = 17)(
 	input logic reset, 
 	input logic enable,
 	input logic int_osc,
-	output logic led
+	output logic [WIDTH-1:0]counter
 );
 
-// outputs a digit at a frequency of 2.4 Hz
-	logic [w-1:0] counter; 
-	// p calculated to blink led[2] at 2.4 Hz assuming the speed of the clock is 24MHz
+	// MAX_COUNT calculated to blink led[2] at 120 Hz assuming the speed of the clock is 24MHz
 	// Counter
    
 	always_ff @(posedge int_osc) begin
 		if (reset == 0) begin 
 			counter <= 0;
-			led <= 0;			// LED = 0 at the beginning
 			end 
 		else if (enable) begin
-			if (counter >= p) begin
+			if (counter >= MAX_COUNT) begin
 				counter <=0;
-				led <= ~led;	// fip LED
 				end 
 			else begin 
 				counter <= counter + 1;
-				led <= led;		// LED stays same
 				end				
 			end
 		else begin 
 			counter <= counter;
-			led <= led; 		// LED stays same
 			end 
 	end
   

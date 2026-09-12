@@ -1,0 +1,46 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading project lab2_kl
+# Compile of counter.sv failed with 1 errors.
+# Compile of lab2_kl.sv failed with 2 errors.
+# Compile of led_display.sv was successful.
+# Compile of mux.sv failed with 1 errors.
+# 4 compiles, 3 failed with 4 errors.
+# Compile of counter.sv was successful.
+# Compile of lab2_kl.sv failed with 2 errors.
+# Compile of led_display.sv was successful.
+# Compile of mux.sv failed with 1 errors.
+# 4 compiles, 2 failed with 3 errors.
+# Compile of counter.sv was successful.
+# Compile of lab2_kl.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of mux.sv failed with 1 errors.
+# 4 compiles, 1 failed with 1 error.
+# Compile of counter.sv was successful.
+# Compile of lab2_kl.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of mux.sv failed with 1 errors.
+# 4 compiles, 1 failed with 1 error.
+# Compile of counter.sv was successful.
+# Compile of lab2_kl.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of mux.sv failed with 1 errors.
+# 4 compiles, 1 failed with 1 error.
+# Compile of counter.sv was successful.
+# Compile of lab2_kl.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of mux.sv was successful.
+# 4 compiles, 0 failed with no errors.

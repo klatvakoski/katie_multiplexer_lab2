@@ -1,0 +1,16 @@
+#Start recording tcl command: 9/11/2026 19:44:58
+#Project Location: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl; Project name: lab2_kl
+prj_open "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/lab2_kl.rdf"
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/mux.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_impl_opt -impl "impl_1" {top} {lab2_kl.sv}
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_impl_opt -impl "impl_1" {top} {lab2_kl}
+prj_save 
+#Stop recording: 9/11/2026 21:11:15
