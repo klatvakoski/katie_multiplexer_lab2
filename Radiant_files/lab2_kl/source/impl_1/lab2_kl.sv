@@ -2,9 +2,9 @@
 module lab2_kl(
      input   logic reset,
 	 input 	 logic enable, 
-	 input	 logic [1:0] chosen_pin,
 	 input	 logic [3:0]dip1,
 	 input	 logic [3:0]dip2,
+	 output	 logic [1:0] chosen_pin,
 	 output  logic [6:0]seg
 );
    localparam MAX_COUNT = 120000;

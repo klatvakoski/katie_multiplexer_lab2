@@ -12,9 +12,9 @@ module lab2_kltb();
 	lab2_kl dut (
 		.reset(reset),
 		.enable(enable),
-		.chosen_pin(chosen_pin),
 		.dip1(dip1),
 		.dip2(dip2),
+		.chosen_pin(chosen_pin),
 		.seg(seg)
 		);
 	
