@@ -1,0 +1,230 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+!s12c _opt1
+R1
+R0
+R1
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims
+T_opt
+!i145 1
+!i144 0
+!s110 1789269723
+VS805@a=^oz1nW;K<:4glg2
+04 7 4 work lab2_kl fast 0
+04 9 4 work lab2_kltb fast 0
+=4-8cf8c5f816aa-6aa616db-12e-6de0
+R1
+!s12f OEM25U11 
+Z3 !s12b OEM100
+Z4 !s124 OEM100
+Z5 !s135 nogc
+Z6 o-quiet -auto_acc_if_foreign -work work -L iCE40UP +acc
+Z7 tCvgOpt 0 defaultOptions 1107585188
+n@_opt
+Z8 OL;O;2025.2;82
+R2
+T_opt1
+!i145 1
+!i144 0
+!s110 1789268024
+VCfj^575jYAM^<W3[=ZbW91
+04 8 4 work count_tb fast 0
+04 7 4 work counter fast 0
+=1-8cf8c5f816aa-6aa61038-1d6-5d54
+R1
+!s12f OEM25U3 
+R3
+R4
+R5
+R6
+R7
+n@_opt1
+R8
+R2
+vcount_tb
+2C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/count_tb.sv
+Z9 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z10 !s110 1789269752
+!i10b 1
+!s100 >;bKIJLFV3WfF@I:<dn`;2
+I`Zb^@XSHI;ClKEnmnfJE[0
+S1
+Z11 dC:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/new_sims
+w1789268003
+8C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/count_tb.sv
+FC:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/count_tb.sv
+!i122 65
+L0 3 42
+Z12 VDg1SIo80bB@j0V0VzS_@n1
+Z13 OL;L;2025.2;82
+r1
+!s85 0
+31
+!s108 1789269752.000000
+!s107 C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/count_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/count_tb.sv|
+!i113 0
+Z14 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z15 tCvgOpt 0 defaultOptions 1085333592
+vcounter
+2C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/counter.sv
+R9
+Z16 !s110 1789269751
+!i10b 1
+!s100 kPRD2=DE>1P3@i[VJn>CH2
+ITNGL^EN`E4NHSJO1Q9^A?0
+S1
+R11
+Z17 w1789262660
+8C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/counter.sv
+FC:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/counter.sv
+!i122 59
+L0 2 28
+R12
+R13
+r1
+!s85 0
+31
+Z18 !s108 1789269751.000000
+!s107 C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/counter.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/counter.sv|
+!i113 0
+R14
+R15
+vlab1_tb
+2C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/mux_tb.sv
+R9
+R10
+!i10b 1
+!s100 DhUS0KVgCO]7Dkh12bjnm1
+I5f^kIU:33g8F`0QinCE5i1
+S1
+R11
+R17
+8C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/mux_tb.sv
+FC:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/mux_tb.sv
+!i122 64
+L0 2 26
+R12
+R13
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/mux_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/mux_tb.sv|
+!i113 0
+R14
+R15
+vlab2_kl
+2C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/lab2_kl.sv
+R9
+R16
+!i10b 1
+!s100 c;i0eV7:Tf>mKe^A_VT@m0
+I<R[2d1klDFOG1@PCz=Ghb2
+S1
+R11
+w1789269709
+8C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/lab2_kl.sv
+FC:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/lab2_kl.sv
+!i122 60
+L0 2 46
+R12
+R13
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/lab2_kl.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/lab2_kl.sv|
+!i113 0
+R14
+R15
+vlab2_kltb
+2C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/lab2_kltb.sv
+R9
+R16
+!i10b 1
+!s100 NVj2gYzg4ZZek7^B<ja3F2
+Im2GCBa9^LTI3a>31flAQX2
+S1
+R11
+w1789269665
+8C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/lab2_kltb.sv
+FC:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/lab2_kltb.sv
+!i122 61
+L0 2 50
+R12
+R13
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/lab2_kltb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/lab2_kltb.sv|
+!i113 0
+R14
+R15
+vled_display
+2C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/led_display.sv
+R9
+R16
+!i10b 1
+!s100 UJMVMAYV0jdYA@oC_Q]aA0
+ISGi;@>9?ELO;[Cllz;JX72
+S1
+R11
+R17
+8C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/led_display.sv
+FC:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/led_display.sv
+!i122 62
+L0 1 28
+R12
+R13
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/led_display.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/led_display.sv|
+!i113 0
+R14
+R15
+vmux
+2C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/mux.sv
+R9
+R16
+!i10b 1
+!s100 MSZNi64;FPP3O<chkMd=92
+INN<b:`S:[QLFO9g3FR_Og1
+S1
+R11
+R17
+8C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/mux.sv
+FC:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/mux.sv
+!i122 63
+L0 1 8
+R12
+R13
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/mux.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/source/impl_1/mux.sv|
+!i113 0
+R14
+R15

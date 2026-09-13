@@ -45,7 +45,7 @@
 -sver "../source/impl_1/counter.sv"
 -sver "../source/impl_1/mux.sv"
 -path ".."
--top lab2_kl.sv
+-top lab2_kl
 # Output Configuration
 -udb "lab2_kl_impl_1_rtl.udb"
 -output_hdl "lab2_kl_impl_1.vm"

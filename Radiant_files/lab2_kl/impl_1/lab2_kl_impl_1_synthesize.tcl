@@ -12,6 +12,9 @@ if {![file exists {C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/
 cd {C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/impl_1}
 # synthesize IPs
 # synthesize VMs
+# propgate constraints
+file delete -force -- lab2_kl_impl_1_cpe.ldc
+::radiant::runengine::run_engine_newmsg cpe -syn lse -f "lab2_kl_impl_1.cprj" -a "iCE40UP"  -o lab2_kl_impl_1_cpe.ldc
 # synthesize top design
 file delete -force -- lab2_kl_impl_1.vm lab2_kl_impl_1.ldc
 ::radiant::runengine::run_engine_newmsg synthesis -f "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/impl_1/lab2_kl_impl_1_lattice.synproj" -logfile "lab2_kl_impl_1_lattice.srp"

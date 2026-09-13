@@ -20,15 +20,19 @@ module lab2_kl(
          hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 	
 	// call counter module for switching between the two LED segments
-   counter counting(reset, enable, int_osc, count);
+   counter #(MAX_COUNT,WIDTH) counting(reset, enable, int_osc, count);
+   
    // flip s based on the counting module. Then it can choose dip1 or dip2
-   always_comb begin 
-		if (count >= MAX_COUNT) begin 
-		   s = ~s;
-		   end
-	   else begin 
+   always_ff @(posedge int_osc) begin
+	   if (reset == 0) 
+			s = 0;
+	   else if (enable)
+		   if (count >= MAX_COUNT)  
+				s = ~s;
+			else 
+				s = s; 
+	   else  
 		   s = s; 
-		   end 
 	end 
 	// use a mux to choose which dip switch we're taking from
 	mux #(4) choose_dip(dip1,dip2,s,chosen_dip);

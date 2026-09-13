@@ -20,20 +20,24 @@ module lab2_kltb();
 	
 	// checking if mux and counter integrate
 	initial begin
+	reset = 0; 
+	#22;
 	reset = 1;
 	enable = 1;
+	dip1 = 4'b1111;
+	dip2 = 4'b0000;
 	#22; 
 	// 0
 	assert (dut.chosen_dip === dip1) else $error("choose_pin failed on dip1");
 	assert (chosen_pin === 2'b10) else $error("chosen_pin failed on initial dip1");
 	
-	#8333;
+	#8300;
 		
 	//1
 	assert (dut.chosen_dip === dip2) else $error("choose_pin failed on dip2");
 	assert (chosen_pin === 2'b01) else $error("chosen_pin failed on initial dip2");
 
-	#8333;
+	#8300;
 		
 	//1
 	assert (dut.chosen_dip === dip1) else $error("choose_dip failed on switch back to dip1");

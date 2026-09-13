@@ -1,3 +1,15 @@
+synthesis:  version Radiant Software (64-bit) 2026.1.0.37.0
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
+Sat Sep 12 20:47:24 2026
+
+
+Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/impl_1/lab2_kl_impl_1_lattice.synproj -logfile lab2_kl_impl_1_lattice.srp -gui -msgset C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/promote.xml 
+
 Lattice Synthesis Engine launched.
 
 Synthesis options:
@@ -40,7 +52,7 @@ INFO <35001797> - synthesis: Use DCC Insertion disabled by default.
 ----------------------------------------------------------------
 Optimization Goal     | Area
 ----------------------------------------------------------------
-Top-level Module Name | sv
+Top-level Module Name | lab2_kl
 ----------------------------------------------------------------
 Target Frequency      | 200.000 MHz
 ----------------------------------------------------------------
@@ -121,5 +133,102 @@ Analyzing Verilog file C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\v
 Analyzing Verilog file C:/lscc/radiant/2026.1/ispfpga\..\cae_library\simulation\verilog\iCE40UP\iCE40UP_sp.v. VERI-1482
 Analyzing Verilog file C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.v. VERI-1482
 Analyzing Verilog file ../source/impl_1/lab2_kl.sv. VERI-1482
-WARNING <35901188> - synthesis: ../source/impl_1/lab2_kl.sv(14): WIDTH is not a constant. VERI-1188
-ERROR <35901072> - synthesis: ../source/impl_1/lab2_kl.sv(39): module module ignored due to previous errors. VERI-1072
+Analyzing Verilog file ../source/impl_1/led_display.sv. VERI-1482
+Analyzing Verilog file ../source/impl_1/counter.sv. VERI-1482
+Analyzing Verilog file ../source/impl_1/mux.sv. VERI-1482
+Top module name (Verilog): lab2_kl
+INFO <35901018> - synthesis: ../source/impl_1/lab2_kl.sv(2): compiling module lab2_kl. VERI-1018
+INFO <35901018> - synthesis: C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/counter.sv(2): compiling module counter. VERI-1018
+WARNING <35901209> - synthesis: ../source/impl_1/counter.sv(21): expression size 32 truncated to fit in target size 18. VERI-1209
+INFO <35901018> - synthesis: ../source/impl_1/mux.sv(1): compiling module mux. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/mux.sv(1): compiling module mux(WIDTH=2). VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/led_display.sv(1): compiling module led_display. VERI-1018
+[Parameter Setting Section Start]
+
+	[Parameter Settings for Instance(s): hf_osc]
+	(Module: HSOSC)
+		CLKHF_DIV                 2'b01
+
+	[Parameter Settings for Instance(s): counting]
+	(Module: counter)
+		MAX_COUNT                 120000
+		WIDTH                     18
+
+	[Parameter Settings for Instance(s): choose_dip]
+	(Module: mux)
+		WIDTH                     4
+
+	[Parameter Settings for Instance(s): choose_pin]
+	(Module: mux)
+		WIDTH                     2
+
+[Parameter Setting Section End]
+
+
+
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: reset
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: enable
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: dip1[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: dip1[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: dip1[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: dip1[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: dip2[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: dip2[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: dip2[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: dip2[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: chosen_pin[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: chosen_pin[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[6]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[5]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[4]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[0]
+
+################### Begin Area Report (lab2_kl)######################
+Number of register bits => 19 of 5280 (0 % )
+CCU2 => 10
+FD1P3XZ => 19
+HSOSC_CORE => 1
+IB => 10
+LUT4 => 37
+OB => 9
+################### End Area Report ##################
+Number of odd-length carry chains : 0
+Number of even-length carry chains : 1
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : int_osc, loads : 0
+Clock Enable Nets
+Number of Clock Enables: 0
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : n23, loads : 29
+  Net : n246, loads : 20
+  Net : n78, loads : 19
+  Net : n25, loads : 12
+  Net : counting/n39[17], loads : 12
+  Net : counting/n39[9], loads : 12
+  Net : counting/n39[16], loads : 12
+  Net : counting/n39[10], loads : 12
+  Net : counting/n39[11], loads : 12
+  Net : counting/n39[0], loads : 12
+################### End Clock Report ##################
+
+################### Begin Constraint Report ######################
+Constraint Summary:
+  Total number of constraints: 0
+  Total number of constraints dropped: 0
+###################  End Constraint Report  ######################
+
+Peak Memory Usage: 89 MB
+
+--------------------------------------------------------------
+Total CPU Time: 0 secs 
+Total REAL Time: 3 secs 
+--------------------------------------------------------------
+Checksum -- synthesis -- netlist: e1d1488d71d17735522c57534254cf976d9cb8e2
