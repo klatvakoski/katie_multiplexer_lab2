@@ -1,0 +1,20 @@
+#Start recording tcl command: 9/13/2026 18:59:16
+#Project Location: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl; Project name: lab2_v2kl
+prj_create -name "lab2_v2kl" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_save 
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/counter.sv"
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/lab2_keypad.sv"
+prj_set_impl_opt -impl "impl_1" {top} {lab2_keypad}
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad.sv"
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/unused_code.sv"
+prj_disable_source "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/unused_code.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/keypad_pinout.pdc"
+prj_enable_source "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/keypad_pinout.pdc"
+prj_run Export -impl impl_1
+#Stop recording: 9/13/2026 21:33:27
