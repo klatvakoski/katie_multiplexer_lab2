@@ -19,7 +19,7 @@ module lab2_keypad(
    // call keypad module
    keypad key(reset, enable, clk, col, row, led);
    
-   
+assign led[3:0] = ~col[3:0]; 
    
 
 endmodule

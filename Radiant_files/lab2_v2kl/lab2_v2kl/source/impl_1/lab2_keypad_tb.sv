@@ -1,0 +1,47 @@
+`timescale 1 us/1 ns
+module lab2_keypad_tb (); 
+
+    // test signals: 
+        logic reset;
+        logic enable; 
+        logic clk;
+        logic [3:0]row;
+        logic [3:0]led; 
+
+    keypad dut (
+        .reset(reset),
+        .enable(enable), 
+        .clk(clk), 
+        .row(row),
+        .led(led)
+        );
+
+	initial begin
+	reset = 1;
+    enable = 1; 
+    #22; 
+    assert (row[0] === 1) else $error("keypad failed on row[0]");
+    #125000;
+    assert (row[1] === 1) else $error("keypad failed on row[1]");
+    #125000;
+    assert (row[2] === 1) else $error("keypad failed on row[2]");
+    #125000;
+    assert (row[3] === 1) else $error("keypad failed on row[3]");
+
+    #22
+    reset = 0; 
+    assert (dut.count === 0) else $error("keypad failed on reset");
+    #22
+    reset = 1; 
+    #125000; 
+    enable = 0; 
+    assert (row[0] === 1) else $error("keypad failed on row[3]");
+
+
+    
+
+
+	#22;
+	reset = 1;
+	enable = 1;
+	

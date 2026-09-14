@@ -7,7 +7,7 @@ module lab2_kl(
 	 output	 logic [1:0] chosen_pin,
 	 output  logic [6:0]seg
 );
-   localparam MAX_COUNT = 120000;
+   localparam MAX_COUNT = 240000; // X2
    localparam WIDTH = 18;
    logic s;
    logic [3:0]chosen_dip; 
@@ -23,22 +23,15 @@ module lab2_kl(
    counter #(MAX_COUNT,WIDTH) counting(reset, enable, int_osc, count);
    
    // flip s based on the counting module. Then it can choose dip1 or dip2
-   always_ff @(posedge int_osc) begin
-	   if (reset == 0) 
-			s = 0;
-	   else if (enable)
-		   if (count >= MAX_COUNT)  
-				s = ~s;
-			else 
-				s = s; 
-	   else  
-		   s = s; 
-	end 
+   // and which transistor pin is on vs off. 
+   
+	assign s = count > MAX_COUNT/2;
+
 	// use a mux to choose which dip switch we're taking from
 	mux #(4) choose_dip(dip1,dip2,s,chosen_dip);
 	
-	// use a mux to choose which pin is on vs off
-	mux #(2) choose_pin(2'b10,2'b01,s,chosen_pin);
+	// choose which transistor pin is on vs off
+	assign chosen_pin = {s,!s};
 	
    // call display_led module for the seven-segment mapping
    led_display seven_disp(chosen_dip,seg);
