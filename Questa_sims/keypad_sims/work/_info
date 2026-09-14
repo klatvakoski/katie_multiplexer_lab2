@@ -1,0 +1,86 @@
+m255
+K4
+z2
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl
+vcounter
+2C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/counter.sv
+Z0 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+!s110 1789357854
+!i10b 1
+!s100 TOQP@9i4P9aGc3TagJ`o`0
+Inmfod7?`d39^m>5S3Z6HK3
+S1
+Z1 dC:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_sims
+w1789351484
+8C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/counter.sv
+FC:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/counter.sv
+!i122 8
+L0 2 27
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OL;L;2025.2;82
+r1
+!s85 0
+31
+!s108 1789357854.000000
+!s107 C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/counter.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/counter.sv|
+!i113 0
+Z4 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 tCvgOpt 0 defaultOptions 1085333592
+vkeypad
+2C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad.sv
+R0
+Z6 !s110 1789357855
+!i10b 1
+!s100 I_ome]3Ue1QWYS=4eVmMf0
+In[l<NonomcED]1OmiOCg`2
+S1
+R1
+Z7 w1789357837
+8C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad.sv
+FC:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad.sv
+!i122 9
+L0 1 24
+R2
+R3
+r1
+!s85 0
+31
+Z8 !s108 1789357855.000000
+!s107 C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad.sv|
+!i113 0
+R4
+R5
+vlab2_keypad
+2C:\Users\klatvakoski\Documents\GitHub\katie_multiplexer_lab2\Radiant_files\lab2_v2kl\lab2_v2kl\source\impl_1\lab2_keypad.sv
+R0
+R6
+!i10b 1
+!s100 i:4VPjSSP@I4kCCTnfj9K1
+I??XR4ai0I3G=A=8<;me8h0
+S1
+R1
+R7
+8C:\Users\klatvakoski\Documents\GitHub\katie_multiplexer_lab2\Radiant_files\lab2_v2kl\lab2_v2kl\source\impl_1\lab2_keypad.sv
+FC:\Users\klatvakoski\Documents\GitHub\katie_multiplexer_lab2\Radiant_files\lab2_v2kl\lab2_v2kl\source\impl_1\lab2_keypad.sv
+!i122 10
+L0 2 24
+R2
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:\\Users\\klatvakoski\\Documents\\GitHub\\katie_multiplexer_lab2\\Radiant_files\\lab2_v2kl\\lab2_v2kl\\source\\impl_1\\lab2_keypad.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:\Users\klatvakoski\Documents\GitHub\katie_multiplexer_lab2\Radiant_files\lab2_v2kl\lab2_v2kl\source\impl_1\lab2_keypad.sv|
+!i113 0
+R4
+R5

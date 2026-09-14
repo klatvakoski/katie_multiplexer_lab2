@@ -1,0 +1,8 @@
+---------------------------------------------------
+Report for cell lab2_keypad
+   Instance path: lab2_keypad
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2        100.0
+                               LUTGATE	          2        100.0
+                                 IOBUF	         14        100.0

@@ -1,0 +1,8 @@
+-ver "C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.vhd"
+-sver "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/counter.sv" "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/lab2_keypad.sv" "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad.sv"
+-path "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl" "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl"
+-top lab2_keypad
+-isTop
+-a "iCE40UP"
+-t "iCE40UP5K"
