@@ -3,6 +3,32 @@ Report for cell lab2_keypad
    Instance path: lab2_keypad
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          2        100.0
-                               LUTGATE	          2        100.0
+                                  LUT4	         39        100.0
+                               LUTGATE	         29        100.0
+                                LUTCCU	         10        100.0
                                  IOBUF	         14        100.0
+                                PFUREG	          8        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                                keypad	          1        82.1
+---------------------------------------------------
+Report for cell keypad
+   Instance path: lab2_keypad/key
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         32        82.1
+                               LUTGATE	         22        75.9
+                                LUTCCU	         10        100.0
+                                PFUREG	          8        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+        counter(MAX_COUNT=120,WIDTH=8)	          1        82.1
+---------------------------------------------------
+Report for cell counter(MAX_COUNT=120,WIDTH=8)
+   Instance path: lab2_keypad/key/counting
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         32        82.1
+                               LUTGATE	         22        75.9
+                                LUTCCU	         10        100.0
+                                PFUREG	          8        100.0

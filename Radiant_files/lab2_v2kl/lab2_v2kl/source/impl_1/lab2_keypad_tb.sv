@@ -1,47 +1,47 @@
-`timescale 1 us/1 ns
+`timescale 1 us/1 us
 module lab2_keypad_tb (); 
 
     // test signals: 
         logic reset;
-        logic enable; 
-        logic clk;
-        logic [3:0]row;
-        logic [3:0]led; 
+		logic enable;
+		logic [3:0]col;
+		logic [3:0]row;
+		logic [3:0]led;
 
-    keypad dut (
-        .reset(reset),
-        .enable(enable), 
-        .clk(clk), 
-        .row(row),
-        .led(led)
-        );
+	lab2_keypad dut(
+		.reset(reset),
+		.enable(enable), 
+		.col(col),
+		.row(row),
+		.led(led)
+	);
 
 	initial begin
 	reset = 1;
     enable = 1; 
+	col = 4'b1110;
     #22; 
-    assert (row[0] === 1) else $error("keypad failed on row[0]");
-    #125000;
-    assert (row[1] === 1) else $error("keypad failed on row[1]");
-    #125000;
-    assert (row[2] === 1) else $error("keypad failed on row[2]");
-    #125000;
-    assert (row[3] === 1) else $error("keypad failed on row[3]");
-
-    #22
-    reset = 0; 
-    assert (dut.count === 0) else $error("keypad failed on reset");
-    #22
-    reset = 1; 
-    #125000; 
-    enable = 0; 
-    assert (row[0] === 1) else $error("keypad failed on row[3]");
-
-
-    
-
-
+    assert (led[0] === 1) else $error("keypad failed on led[0]");
+	#22; 
+	
+	col = 4'b1101; 
+	#22; 
+    assert (led[1] === 1) else $error("keypad failed on led[1]");
+    #22;
+	
+	col = 4'b1011;
 	#22;
-	reset = 1;
-	enable = 1;
+    assert (led[2] === 1) else $error("keypad failed on led[2]");
+    #22;
+	
+	col = 4'b0111;
+	#22;
+    assert (led[3] === 1) else $error("keypad failed on led[3]");
+    #22;
+	
+	$stop;
+	
+	end 
+
+endmodule 
 	

@@ -13,20 +13,882 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
-# Loading project keypad_sim
+# Loading project keypad_tbs
 # Compile of counter.sv was successful.
 # Compile of keypad.sv was successful.
-# Compile of lab2_keypad.sv failed with 1 errors.
-# 3 compiles, 1 failed with 1 error.
-# Compile of counter.sv was successful.
-# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
 # Compile of lab2_keypad.sv was successful.
-# 3 compiles, 0 failed with no errors.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.lab2_keypad work.lab2_keypad_tb -voptargs=+acc -L iCE40UP
+# ** Note: (vsim-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# vsim -gui work.lab2_keypad work.lab2_keypad_tb -voptargs="+acc" -L iCE40UP 
+# Start time: 16:42:48 on Sep 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_keypad(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.keypad(fast)
+# Loading work.counter(fast)
+# Loading work.lab2_keypad_tb(fast)
+# Loading work.lab2_keypad(fast__1)
+add wave -position insertpoint  \
+sim:/lab2_keypad_tb/dut/reset \
+sim:/lab2_keypad_tb/dut/enable \
+sim:/lab2_keypad_tb/dut/col \
+sim:/lab2_keypad_tb/dut/row \
+sim:/lab2_keypad_tb/dut/led \
+sim:/lab2_keypad_tb/dut/int_osc \
+sim:/lab2_keypad_tb/dut/clk
+run -all
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/lab2_keypad_tb.sv(42)
+#    Time: 176 us  Iteration: 0  Instance: /lab2_keypad_tb
+# Break in Module lab2_keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/lab2_keypad_tb.sv line 42
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab2_keypad(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.keypad(fast)
+# Loading work.counter(fast)
+# Loading work.lab2_keypad_tb(fast)
+# Loading work.lab2_keypad(fast__1)
+add wave -position insertpoint  \
+sim:/lab2_keypad_tb/reset \
+sim:/lab2_keypad_tb/enable \
+sim:/lab2_keypad_tb/col \
+sim:/lab2_keypad_tb/row \
+sim:/lab2_keypad_tb/led
+run -all
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/lab2_keypad_tb.sv(42)
+#    Time: 176 us  Iteration: 0  Instance: /lab2_keypad_tb
+# Break in Module lab2_keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/lab2_keypad_tb.sv line 42
+# Causality operation skipped due to absence of debug database file
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab2_keypad(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.keypad(fast)
+# Loading work.counter(fast)
+# Loading work.lab2_keypad_tb(fast)
+# Loading work.lab2_keypad(fast__1)
+vsim -gui work.lab2_keypad work.lab2_keypad_tb -voptargs=+acc -L iCE40UP
+# End time: 17:00:00 on Sep 14,2026, Elapsed time: 0:17:12
+# Errors: 0, Warnings: 2
+# ** Note: (vsim-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# vsim -gui work.lab2_keypad work.lab2_keypad_tb -voptargs="+acc" -L iCE40UP 
+# Start time: 17:00:00 on Sep 14,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.lab2_keypad(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.keypad(fast)
+# Loading work.counter(fast)
+# Loading work.lab2_keypad_tb(fast)
+# Loading work.lab2_keypad(fast__1)
+add wave -position insertpoint  \
+sim:/lab2_keypad_tb/reset \
+sim:/lab2_keypad_tb/enable \
+sim:/lab2_keypad_tb/col \
+sim:/lab2_keypad_tb/led
+run -all
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/lab2_keypad_tb.sv(42)
+#    Time: 176 us  Iteration: 0  Instance: /lab2_keypad_tb
+# Break in Module lab2_keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/lab2_keypad_tb.sv line 42
 # Compile of counter.sv was successful.
 # Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
 # Compile of lab2_keypad.sv was successful.
-# 3 compiles, 0 failed with no errors.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_keypad(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.keypad(fast)
+# Loading work.counter(fast)
+# Loading work.lab2_keypad_tb(fast)
+# Loading work.lab2_keypad(fast__1)
+add wave -position insertpoint  \
+sim:/lab2_keypad_tb/reset \
+sim:/lab2_keypad_tb/enable \
+sim:/lab2_keypad_tb/col \
+sim:/lab2_keypad_tb/led
+run -all
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/lab2_keypad_tb.sv(42)
+#    Time: 176 us  Iteration: 0  Instance: /lab2_keypad_tb
+# Break in Module lab2_keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/lab2_keypad_tb.sv line 42
+vsim -gui work.keypad -voptargs=+acc -L iCE40UP
+# End time: 17:08:22 on Sep 14,2026, Elapsed time: 0:08:22
+# Errors: 0, Warnings: 2
+# ** Note: (vsim-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# vsim -gui work.keypad -voptargs="+acc" -L iCE40UP 
+# Start time: 17:08:22 on Sep 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast)
+quit -sim
+# End time: 17:09:20 on Sep 14,2026, Elapsed time: 0:00:58
+# Errors: 0, Warnings: 2
 # Compile of counter.sv was successful.
 # Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
 # Compile of lab2_keypad.sv was successful.
-# 3 compiles, 0 failed with no errors.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui -voptargs=+acc -L iCE40UP work.keypad work.keypad_tb
+# ** Note: (vsim-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# vsim -gui -voptargs="+acc" -L iCE40UP work.keypad work.keypad_tb 
+# Start time: 17:10:49 on Sep 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+add wave -position insertpoint  \
+sim:/keypad_tb/reset \
+sim:/keypad_tb/enable \
+sim:/keypad_tb/clk \
+sim:/keypad_tb/row
+add wave -position insertpoint  \
+sim:/keypad_tb/reset \
+sim:/keypad_tb/enable \
+sim:/keypad_tb/clk \
+sim:/keypad_tb/row
+run -all
+# ** Error: keypad failed on row[0]
+#    Time: 22 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 21
+# ** Error: keypad failed on row[1]
+#    Time: 125022 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 23
+# ** Error: keypad failed on row[2]
+#    Time: 250022 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 25
+# ** Error: keypad failed on row[3]
+#    Time: 375022 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 27
+# ** Error: keypad failed on reset
+#    Time: 375044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 31
+# ** Error: keypad failed on enable
+#    Time: 500066 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 36
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(39)
+#    Time: 500088 us  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 39
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad(fast)
+# Loading work.counter(fast)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+add wave -position insertpoint  \
+sim:/keypad_tb/reset \
+sim:/keypad_tb/enable \
+sim:/keypad_tb/clk \
+sim:/keypad_tb/row
+run -all
+# ** Error: keypad failed on row[0]
+#    Time: 22 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 21
+# ** Error: keypad failed on row[1]
+#    Time: 125022 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 23
+# ** Error: keypad failed on row[2]
+#    Time: 250022 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 25
+# ** Error: keypad failed on row[3]
+#    Time: 375022 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 27
+# ** Error: keypad failed on reset
+#    Time: 375044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 31
+# ** Error: keypad failed on enable
+#    Time: 500066 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 36
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(39)
+#    Time: 500088 us  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 39
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+run -all
+# ** Error: keypad failed on row[0]
+#    Time: 22 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 25
+# ** Error: keypad failed on row[1]
+#    Time: 125022 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 27
+# ** Error: keypad failed on row[2]
+#    Time: 250022 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 29
+# ** Error: keypad failed on row[3]
+#    Time: 375022 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 31
+# ** Error: keypad failed on reset
+#    Time: 375044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 35
+# ** Error: keypad failed on enable
+#    Time: 500066 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 40
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(43)
+#    Time: 500088 us  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 43
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+run -all
+# ** Error: keypad failed on row[0]
+#    Time: 44 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 27
+# ** Error: keypad failed on row[1]
+#    Time: 125044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 29
+# ** Error: keypad failed on row[2]
+#    Time: 250044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 31
+# ** Error: keypad failed on row[3]
+#    Time: 375044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 33
+# ** Error: keypad failed on reset
+#    Time: 375066 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 37
+# ** Error: keypad failed on enable
+#    Time: 500088 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 42
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(45)
+#    Time: 500110 us  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 45
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+run -all
+# ** Error: keypad failed on row[0]
+#    Time: 44 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 27
+# ** Error: keypad failed on row[1]
+#    Time: 125044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 29
+# ** Error: keypad failed on row[2]
+#    Time: 250044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 31
+# ** Error: keypad failed on row[3]
+#    Time: 375044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 33
+# ** Error: keypad failed on reset
+#    Time: 375066 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 37
+# ** Error: keypad failed on enable
+#    Time: 500088 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 42
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(45)
+#    Time: 500110 us  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 45
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+add wave -position insertpoint  \
+sim:/keypad/counting/counter
+run -all
+# ** Error: keypad failed on row[0]
+#    Time: 44 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 27
+# ** Error: keypad failed on row[1]
+#    Time: 125044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 29
+# ** Error: keypad failed on row[2]
+#    Time: 250044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 31
+# ** Error: keypad failed on row[3]
+#    Time: 375044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 33
+# ** Error: keypad failed on reset
+#    Time: 375066 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 37
+# ** Error: keypad failed on enable
+#    Time: 500088 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 42
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(45)
+#    Time: 500110 us  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 45
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+run -all
+# ** Error: keypad failed on row[0]
+#    Time: 44 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 27
+# ** Error: keypad failed on row[1]
+#    Time: 125044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 29
+# ** Error: keypad failed on row[2]
+#    Time: 250044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 31
+# ** Error: keypad failed on row[3]
+#    Time: 375044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 33
+# ** Error: keypad failed on reset
+#    Time: 375066 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 37
+# ** Error: keypad failed on enable
+#    Time: 500088 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 42
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(45)
+#    Time: 500110 us  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 45
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+add wave -position insertpoint  \
+sim:/keypad_tb/dut/count
+run -all
+# ** Error: keypad failed on row[1]
+#    Time: 125044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 32
+# ** Error: keypad failed on row[2]
+#    Time: 250044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 34
+# ** Error: keypad failed on row[3]
+#    Time: 375044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 36
+# ** Error: keypad failed on reset
+#    Time: 375066 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 40
+# ** Error: keypad failed on enable
+#    Time: 500088 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 45
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(48)
+#    Time: 500110 us  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 48
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+run -all
+# ** Error: keypad failed on row[1]
+#    Time: 125044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 32
+# ** Error: keypad failed on row[2]
+#    Time: 250044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 34
+# ** Error: keypad failed on row[3]
+#    Time: 375044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 36
+# ** Error: keypad failed on reset
+#    Time: 375066 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 40
+# ** Error: keypad failed on enable
+#    Time: 500088 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 45
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(48)
+#    Time: 500110 us  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 48
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+run -all
+# ** Error: keypad failed on row[1]
+#    Time: 125044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 32
+# ** Error: keypad failed on row[2]
+#    Time: 250044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 34
+# ** Error: keypad failed on row[3]
+#    Time: 375044 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 36
+# ** Error: keypad failed on reset
+#    Time: 375066 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 40
+# ** Error: keypad failed on enable
+#    Time: 500088 us  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 45
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(48)
+#    Time: 500110 us  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 48
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+run -all
+# ** Error: keypad failed on row[3]
+#    Time: 375044 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 36
+# ** Error: keypad failed on reset
+#    Time: 375066 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 40
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(48)
+#    Time: 500110 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 48
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+run -all
+# ** Error: keypad failed on row[3]
+#    Time: 375044 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 36
+# ** Error: keypad failed on reset
+#    Time: 375066 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 40
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(48)
+#    Time: 500110 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 48
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+run -all
+# ** Error: keypad failed on row[3]
+#    Time: 375044 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 36
+# ** Error: keypad failed on reset
+#    Time: 375066 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 40
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(48)
+#    Time: 500110 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 48
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+add wave -position insertpoint  \
+sim:/keypad_tb/reset \
+sim:/keypad_tb/enable \
+sim:/keypad_tb/clk \
+sim:/keypad_tb/row
+add wave -position insertpoint  \
+sim:/keypad_tb/dut/count
+run -all
+# ** Error: keypad failed on row[3]
+#    Time: 375044 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 36
+# ** Error: keypad failed on reset
+#    Time: 375066 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 40
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(48)
+#    Time: 500110 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 48
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+run -all
+# ** Error: keypad failed on row[3]
+#    Time: 375044 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 36
+# ** Error: keypad failed on reset
+#    Time: 375066 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 40
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(48)
+#    Time: 500110 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 48
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+# Compile of counter.sv was successful.
+# Compile of keypad.sv failed with 1 errors.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 1 failed with 1 error.
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+run -all
+# ** Error: keypad failed on reset
+#    Time: 375066 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 40
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(48)
+#    Time: 500110 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 48
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+run -all
+# ** Error: keypad failed on reset
+#    Time: 375066 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 40
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(48)
+#    Time: 500110 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 48
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+run -all
+# ** Error: keypad failed on row[1]
+#    Time: 57 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 32
+# ** Error: keypad failed on row[2]
+#    Time: 70 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 34
+# ** Error: keypad failed on row[3]
+#    Time: 83 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 36
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(49)
+#    Time: 125154 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 49
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+run -all
+# ** Error: keypad failed on row[1]
+#    Time: 24 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 32
+# ** Error: keypad failed on row[2]
+#    Time: 25 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 34
+# ** Error: keypad failed on row[3]
+#    Time: 26 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 36
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(49)
+#    Time: 125097 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 49
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+run -all
+# ** Error: keypad failed on row[1]
+#    Time: 24 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 32
+# ** Error: keypad failed on row[2]
+#    Time: 25 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 34
+# ** Error: keypad failed on row[3]
+#    Time: 26 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 36
+# ** Error: keypad failed on enable
+#    Time: 97 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 46
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(49)
+#    Time: 119 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 49
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+run -all
+# ** Error: keypad failed on enable
+#    Time: 493 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 46
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(49)
+#    Time: 515 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 49
+restart -all
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+run -all
+# ** Error: keypad failed on enable
+#    Time: 493 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 46
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(49)
+#    Time: 515 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 49
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+run -all
+# ** Error: keypad failed on enable
+#    Time: 671 ns  Scope: keypad_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv Line: 46
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(51)
+#    Time: 1071 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 51
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+run -all
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(51)
+#    Time: 1249 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 51
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+run -all
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(51)
+#    Time: 1549 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 51
+# Compile of counter.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of keypad_tb.sv was successful.
+# Compile of lab2_keypad.sv was successful.
+# Compile of lab2_keypad_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad(fast)
+# Loading work.counter(fast__1)
+# Loading work.keypad_tb(fast)
+# Loading work.keypad(fast__1)
+# Loading work.counter(fast)
+run -all
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv(51)
+#    Time: 1449 ns  Iteration: 0  Instance: /keypad_tb
+# Break in Module keypad_tb at C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv line 51
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# End time: 18:18:15 on Sep 14,2026, Elapsed time: 1:07:26
+# Errors: 0, Warnings: 2

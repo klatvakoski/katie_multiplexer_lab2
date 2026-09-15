@@ -1,9 +1,36 @@
 ----------------------------------------------------------------------
 Report for cell lab2_keypad.TECH
-Register bits:  0 of 5280 (0.000%)
+Register bits:  8 of 5280 (0.152%)
 I/O cells:      14
                                   Cell usage:
                                cell     count   Res Usage(%)
+                               CCU2         5          100.0
+                            FD1P3XZ         8          100.0
+                         HSOSC_CORE         1          100.0
                                  IB         6          100.0
+                               LUT4        28          100.0
                                  OB         8          100.0
-                              TOTAL        14
+SUB MODULES
+     counter(MAX_COUNT=120,WIDTH=8)         1
+                             keypad         1
+                              TOTAL        58
+----------------------------------------------------------------------
+Report for cell keypad.v1
+Instance Path : key
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         5          100.0
+                            FD1P3XZ         8          100.0
+                               LUT4        22           78.6
+SUB MODULES
+     counter(MAX_COUNT=120,WIDTH=8)         1
+                              TOTAL        36
+----------------------------------------------------------------------
+Report for cell counter(MAX_COUNT=120,WIDTH=8).v1
+Instance Path : key.counting
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         5          100.0
+                            FD1P3XZ         8          100.0
+                               LUT4        22           78.6
+                              TOTAL        35

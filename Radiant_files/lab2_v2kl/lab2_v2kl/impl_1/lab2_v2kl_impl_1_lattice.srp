@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Sep 13 20:50:59 2026
+Mon Sep 14 18:18:40 2026
 
 
 Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/impl_1/lab2_v2kl_impl_1_lattice.synproj -logfile lab2_v2kl_impl_1_lattice.srp -gui -msgset C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/promote.xml 
@@ -138,10 +138,8 @@ Top module name (Verilog): lab2_keypad
 INFO <35901018> - synthesis: ../source/impl_1/lab2_keypad.sv(2): compiling module lab2_keypad. VERI-1018
 INFO <35901018> - synthesis: C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
 INFO <35901018> - synthesis: ../source/impl_1/keypad.sv(1): compiling module keypad. VERI-1018
-INFO <35901018> - synthesis: ../source/impl_1/counter.sv(2): compiling module counter(MAX_COUNT=6000000,WIDTH=24). VERI-1018
-WARNING <35901209> - synthesis: ../source/impl_1/counter.sv(20): expression size 32 truncated to fit in target size 24. VERI-1209
-WARNING <35931002> - synthesis: ../source/impl_1/keypad.sv(14): net int_osc does not have a driver. VDB-1002
-WARNING <35931002> - synthesis: ../source/impl_1/lab2_keypad.sv(20): net clk does not have a driver. VDB-1002
+INFO <35901018> - synthesis: ../source/impl_1/counter.sv(2): compiling module counter(MAX_COUNT=120,WIDTH=8). VERI-1018
+WARNING <35901209> - synthesis: ../source/impl_1/counter.sv(20): expression size 32 truncated to fit in target size 8. VERI-1209
 [Parameter Setting Section Start]
 
 	[Parameter Settings for Instance(s): hf_osc]
@@ -150,82 +148,58 @@ WARNING <35931002> - synthesis: ../source/impl_1/lab2_keypad.sv(20): net clk doe
 
 	[Parameter Settings for Instance(s): counting]
 	(Module: counter)
-		MAX_COUNT                 6000000
-		WIDTH                     24
+		MAX_COUNT                 120
+		WIDTH                     8
 
 [Parameter Setting Section End]
-WARNING <35931002> - synthesis: ../source/impl_1/lab2_keypad.sv(20): net clk does not have a driver. VDB-1002
-WARNING <35931002> - synthesis: ../source/impl_1/keypad.sv(14): net int_osc does not have a driver. VDB-1002
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: col[3]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: col[2]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: col[1]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: col[0]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: led[3]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: led[2]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: led[1]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: led[0]
-######## Missing driver on net \key/int_osc. Patching with GND.
 
 
 
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: col[3]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: col[2]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: col[1]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: col[0]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: led[3]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: led[2]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: led[1]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: led[0]
-WARNING <35935040> - synthesis: Register \key/counting/counter__i13 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i12 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i11 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i10 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i9 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i8 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i7 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i6 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i5 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i4 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i3 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i1 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i0 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i14 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i15 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i16 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i18 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i19 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i20 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i21 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i22 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \key/counting/counter__i23 clock is stuck at Zero. VDB-5040
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: reset
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: enable
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: col[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: col[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: col[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: col[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: row[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: row[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: row[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: row[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: led[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: led[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: led[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: led[0]
 
 ################### Begin Area Report (lab2_keypad)######################
-Number of register bits => 0 of 5280 (0 % )
+Number of register bits => 8 of 5280 (0 % )
+CCU2 => 5
+FD1P3XZ => 8
+HSOSC_CORE => 1
 IB => 6
+LUT4 => 28
 OB => 8
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
-Number of even-length carry chains : 0
+Number of even-length carry chains : 1
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 0
+Number of Clocks: 1
+  Net : int_osc, loads : 0
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : col_c[3], loads : 1
-  Net : col_c[2], loads : 1
-  Net : col_c[1], loads : 1
-  Net : col_c[0], loads : 1
-  Net : reset_c, loads : 0
-  Net : enable_c, loads : 0
-  Net : led[0], loads : 0
-  Net : led[1], loads : 0
-  Net : led[2], loads : 0
-  Net : led[3], loads : 0
+  Net : n184, loads : 9
+  Net : key/counting/count[5], loads : 9
+  Net : key/counting/n319, loads : 9
+  Net : n177, loads : 8
+  Net : key/counting/count[6], loads : 7
+  Net : key/counting/count[7], loads : 7
+  Net : key/counting/n39[7], loads : 7
+  Net : key/counting/count[2], loads : 7
+  Net : key/counting/n39[6], loads : 6
+  Net : key/counting/n39[3], loads : 6
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -234,10 +208,10 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 88 MB
+Peak Memory Usage: 87 MB
 
 --------------------------------------------------------------
 Total CPU Time: 0 secs 
 Total REAL Time: 3 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 8c46bd888764e2e9ca83696425fd18f11f6cd498
+Checksum -- synthesis -- netlist: d0ae245c87bf6a80266040bd76a3d616ac918f0a

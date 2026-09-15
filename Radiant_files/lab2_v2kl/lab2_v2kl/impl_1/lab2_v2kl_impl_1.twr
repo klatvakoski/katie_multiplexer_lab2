@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2026.1.0.37.0
 
-Sun Sep 13 21:00:03 2026
+Mon Sep 14 18:18:54 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -48,10 +48,11 @@ Package Status:                     Preliminary    Version 1.5
 
 1.1  SDC Constraints
 =====================
+create_clock -name {int_osc} -period 41.6667 [get_pins {hf_osc/CLKHF }] 
 
 1.2  Constraint Coverage
 ---------------------------
-Constraint Coverage: 0%
+Constraint Coverage: 43.75%
 
 
 1.3  Overall Summary
@@ -71,9 +72,31 @@ There is no start point satisfying reporting criteria
 
 
 Clocked but unconstrained timing end points
---------------------------------------------------
-There is no end point satisfying reporting criteria
-
+-------------------------------------------------------------------
+          Listing 8 End Points          |           Type           
+-------------------------------------------------------------------
+{key/counting/counter__i7/SP   key/counting/counter__i6/SP}                           
+                                        |           No arrival time
+{key/counting/counter__i7/SR   key/counting/counter__i6/SR}                           
+                                        |           No arrival time
+{key/counting/counter__i4/SP   key/counting/counter__i5/SP}                           
+                                        |           No arrival time
+{key/counting/counter__i4/SR   key/counting/counter__i5/SR}                           
+                                        |           No arrival time
+{key/counting/counter__i3/SP   key/counting/counter__i2/SP}                           
+                                        |           No arrival time
+{key/counting/counter__i3/SR   key/counting/counter__i2/SR}                           
+                                        |           No arrival time
+{key/counting/counter__i1/SP   key/counting/counter__i0/SP}                           
+                                        |           No arrival time
+{key/counting/counter__i1/SR   key/counting/counter__i0/SR}                           
+                                        |           No arrival time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing end poin |                          
+ts                                      |                         8
+                                        |                          
+-------------------------------------------------------------------
 
 1.4.2  Start/End Points Without Timing Constraints
 ---------------------------------------------------
@@ -89,19 +112,21 @@ create_generated_clock,
 ...
 
 -------------------------------------------------------------------
-     Listing 8 Start or End Points      |           Type           
+     Listing 10 Start or End Points     |           Type           
 -------------------------------------------------------------------
 col[0]                                  |                     input
 col[1]                                  |                     input
 col[2]                                  |                     input
 col[3]                                  |                     input
-led[0]                                  |                    output
-led[1]                                  |                    output
-led[2]                                  |                    output
+enable                                  |                     input
+reset                                   |                     input
 led[3]                                  |                    output
+row[3]                                  |                    output
+led[2]                                  |                    output
+row[2]                                  |                    output
 -------------------------------------------------------------------
                                         |                          
-Number of I/O ports without constraint  |                         8
+Number of I/O ports without constraint  |                        14
                                         |                          
 -------------------------------------------------------------------
 
@@ -123,13 +148,39 @@ None
 2.1  Clock Summary
 =======================
 
+2.1.1 Clock "int_osc"
+=======================
+create_clock -name {int_osc} -period 41.6667 [get_pins {hf_osc/CLKHF }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+             Clock int_osc              |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From int_osc                           |             Target |          41.667 ns |         24.000 MHz 
+                                        | Actual (all paths) |          20.792 ns |         48.095 MHz 
+hf_osc/CLKHF (MPW)                      |   (50% duty cycle) |          20.792 ns |         48.095 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+
 2.2  Endpoint slacks
 =======================
---------------------------------------------------
-There is no end point satisfying reporting criteria
-
-Total Negative Slack: 0
-
+-------------------------------------------------------
+          Listing 8 End Points           |    Slack    
+-------------------------------------------------------
+key/counting/counter__i7/D               |   31.637 ns 
+key/counting/counter__i6/D               |   32.469 ns 
+key/counting/counter__i5/D               |   32.746 ns 
+key/counting/counter__i1/D               |   32.811 ns 
+key/counting/counter__i3/D               |   32.811 ns 
+key/counting/counter__i0/D               |   32.864 ns 
+key/counting/counter__i2/D               |   32.864 ns 
+key/counting/counter__i4/D               |   33.023 ns 
+-------------------------------------------------------
+                                         |             
+Setup # of endpoints with negative slack:|           0 
+                                         |             
+-------------------------------------------------------
 
 2.3  Detailed Report
 =======================
@@ -144,6 +195,496 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
                     Detailed Report for timing paths 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i2/Q  (SLICE_R10C9B)
+Path End         : key/counting/counter__i7/D  (SLICE_R10C11B)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 8
+Delay Ratio      : 61.6% (route), 38.4% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 31.636 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  5       
+key/counting/int_osc                                         NET DELAY               5.499                  5.499  5       
+{key/counting/counter__i3/CK   key/counting/counter__i2/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+key/counting/counter__i2/CK->key/counting/counter__i2/Q
+                                          SLICE_R10C9B       CLK_TO_Q1_DELAY         1.388                  6.887  7       
+key/counting/count[2]                                        NET DELAY               2.670                  9.557  7       
+key/counting/add_11_add_5_3/B1->key/counting/add_11_add_5_3/CO1
+                                          SLICE_R10C10B      B1_TO_COUT1_DELAY       0.357                  9.914  2       
+key/counting/n447                                            NET DELAY               0.000                  9.914  2       
+key/counting/add_11_add_5_5/CI0->key/counting/add_11_add_5_5/CO0
+                                          SLICE_R10C10C      CIN0_TO_COUT0_DELAY     0.277                 10.191  2       
+key/counting/n637                                            NET DELAY               0.000                 10.191  2       
+key/counting/add_11_add_5_5/CI1->key/counting/add_11_add_5_5/CO1
+                                          SLICE_R10C10C      CIN1_TO_COUT1_DELAY     0.277                 10.468  2       
+key/counting/n449                                            NET DELAY               0.000                 10.468  2       
+key/counting/add_11_add_5_7/CI0->key/counting/add_11_add_5_7/CO0
+                                          SLICE_R10C10D      CIN0_TO_COUT0_DELAY     0.277                 10.745  2       
+key/counting/n640                                            NET DELAY               0.000                 10.745  2       
+key/counting/add_11_add_5_7/CI1->key/counting/add_11_add_5_7/CO1
+                                          SLICE_R10C10D      CIN1_TO_COUT1_DELAY     0.277                 11.022  2       
+key/counting/n451                                            NET DELAY               1.216                 12.238  2       
+key/counting/add_11_add_5_9/D0->key/counting/add_11_add_5_9/S0
+                                          SLICE_R10C11A      D0_TO_F0_DELAY          0.449                 12.687  1       
+key/counting/n47[7]                                          NET DELAY               2.168                 14.855  1       
+key/counting/i1_2_lut_adj_10/B->key/counting/i1_2_lut_adj_10/Z
+                                          SLICE_R10C11B      D0_TO_F0_DELAY          0.476                 15.331  1       
+key/counting/n39[7]                                          NET DELAY               0.000                 15.331  1       
+key/counting/counter__i7/D                                   ENDPOINT                0.000                 15.331  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  5       
+key/counting/int_osc                                         NET DELAY               5.499                 47.165  5       
+{key/counting/counter__i7/CK   key/counting/counter__i6/CK}
+                                                             CLOCK PIN               0.000                 47.165  1       
+                                                             Uncertainty          -(0.000)                 47.165  
+                                                             Setup time           -(0.198)                 46.967  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              46.967  
+Arrival Time                                                                                            -(15.330)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                       31.636  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i2/Q  (SLICE_R10C9B)
+Path End         : key/counting/counter__i6/D  (SLICE_R10C11B)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 7
+Delay Ratio      : 61.1% (route), 38.9% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 32.468 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  5       
+key/counting/int_osc                                         NET DELAY               5.499                  5.499  5       
+{key/counting/counter__i3/CK   key/counting/counter__i2/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+key/counting/counter__i2/CK->key/counting/counter__i2/Q
+                                          SLICE_R10C9B       CLK_TO_Q1_DELAY         1.388                  6.887  7       
+key/counting/count[2]                                        NET DELAY               2.670                  9.557  7       
+key/counting/add_11_add_5_3/B1->key/counting/add_11_add_5_3/CO1
+                                          SLICE_R10C10B      B1_TO_COUT1_DELAY       0.357                  9.914  2       
+key/counting/n447                                            NET DELAY               0.000                  9.914  2       
+key/counting/add_11_add_5_5/CI0->key/counting/add_11_add_5_5/CO0
+                                          SLICE_R10C10C      CIN0_TO_COUT0_DELAY     0.277                 10.191  2       
+key/counting/n637                                            NET DELAY               0.000                 10.191  2       
+key/counting/add_11_add_5_5/CI1->key/counting/add_11_add_5_5/CO1
+                                          SLICE_R10C10C      CIN1_TO_COUT1_DELAY     0.277                 10.468  2       
+key/counting/n449                                            NET DELAY               0.000                 10.468  2       
+key/counting/add_11_add_5_7/CI0->key/counting/add_11_add_5_7/CO0
+                                          SLICE_R10C10D      CIN0_TO_COUT0_DELAY     0.277                 10.745  2       
+key/counting/n640                                            NET DELAY               0.661                 11.406  2       
+key/counting/add_11_add_5_7/D1->key/counting/add_11_add_5_7/S1
+                                          SLICE_R10C10D      D1_TO_F1_DELAY          0.449                 11.855  1       
+key/counting/n47[6]                                          NET DELAY               2.168                 14.023  1       
+key/counting/i1_2_lut_adj_6/B->key/counting/i1_2_lut_adj_6/Z
+                                          SLICE_R10C11B      D1_TO_F1_DELAY          0.476                 14.499  1       
+key/counting/n39[6]                                          NET DELAY               0.000                 14.499  1       
+key/counting/counter__i6/D                                   ENDPOINT                0.000                 14.499  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  5       
+key/counting/int_osc                                         NET DELAY               5.499                 47.165  5       
+{key/counting/counter__i7/CK   key/counting/counter__i6/CK}
+                                                             CLOCK PIN               0.000                 47.165  1       
+                                                             Uncertainty          -(0.000)                 47.165  
+                                                             Setup time           -(0.198)                 46.967  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              46.967  
+Arrival Time                                                                                            -(14.498)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                       32.468  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i2/Q  (SLICE_R10C9B)
+Path End         : key/counting/counter__i5/D  (SLICE_R10C9D)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 6
+Delay Ratio      : 63.0% (route), 37.0% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 32.745 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  5       
+key/counting/int_osc                                         NET DELAY               5.499                  5.499  5       
+{key/counting/counter__i3/CK   key/counting/counter__i2/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+key/counting/counter__i2/CK->key/counting/counter__i2/Q
+                                          SLICE_R10C9B       CLK_TO_Q1_DELAY         1.388                  6.887  7       
+key/counting/count[2]                                        NET DELAY               2.670                  9.557  7       
+key/counting/add_11_add_5_3/B1->key/counting/add_11_add_5_3/CO1
+                                          SLICE_R10C10B      B1_TO_COUT1_DELAY       0.357                  9.914  2       
+key/counting/n447                                            NET DELAY               0.000                  9.914  2       
+key/counting/add_11_add_5_5/CI0->key/counting/add_11_add_5_5/CO0
+                                          SLICE_R10C10C      CIN0_TO_COUT0_DELAY     0.277                 10.191  2       
+key/counting/n637                                            NET DELAY               0.000                 10.191  2       
+key/counting/add_11_add_5_5/CI1->key/counting/add_11_add_5_5/CO1
+                                          SLICE_R10C10C      CIN1_TO_COUT1_DELAY     0.277                 10.468  2       
+key/counting/n449                                            NET DELAY               0.661                 11.129  2       
+key/counting/add_11_add_5_7/D0->key/counting/add_11_add_5_7/S0
+                                          SLICE_R10C10D      D0_TO_F0_DELAY          0.449                 11.578  1       
+key/counting/n47[5]                                          NET DELAY               2.168                 13.746  1       
+key/counting/i1_2_lut_adj_4/B->key/counting/i1_2_lut_adj_4/Z
+                                          SLICE_R10C9D       D1_TO_F1_DELAY          0.476                 14.222  1       
+key/counting/n39[5]                                          NET DELAY               0.000                 14.222  1       
+key/counting/counter__i5/D                                   ENDPOINT                0.000                 14.222  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  5       
+key/counting/int_osc                                         NET DELAY               5.499                 47.165  5       
+{key/counting/counter__i4/CK   key/counting/counter__i5/CK}
+                                                             CLOCK PIN               0.000                 47.165  1       
+                                                             Uncertainty          -(0.000)                 47.165  
+                                                             Setup time           -(0.198)                 46.967  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              46.967  
+Arrival Time                                                                                            -(14.221)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                       32.745  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i7/Q  (SLICE_R10C11B)
+Path End         : key/counting/counter__i1/D  (SLICE_R10C9A)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 3
+Delay Ratio      : 73.3% (route), 26.7% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 32.810 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  5       
+key/counting/int_osc                                         NET DELAY           5.499                  5.499  5       
+{key/counting/counter__i7/CK   key/counting/counter__i6/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+key/counting/counter__i7/CK->key/counting/counter__i7/Q
+                                          SLICE_R10C11B      CLK_TO_Q0_DELAY     1.388                  6.887  7       
+key/counting/count[7]                                        NET DELAY           3.265                 10.152  7       
+key/counting/i302_3_lut_4_lut/C->key/counting/i302_3_lut_4_lut/Z
+                                          SLICE_R10C8C       B1_TO_F1_DELAY      0.449                 10.601  7       
+key/counting/n319                                            NET DELAY           3.080                 13.681  7       
+key/counting/i1_2_lut_adj_8/A->key/counting/i1_2_lut_adj_8/Z
+                                          SLICE_R10C9A       B0_TO_F0_DELAY      0.476                 14.157  1       
+key/counting/n39[1]                                          NET DELAY           0.000                 14.157  1       
+key/counting/counter__i1/D                                   ENDPOINT            0.000                 14.157  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+                                                             CONSTRAINT          0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  5       
+key/counting/int_osc                                         NET DELAY           5.499                 47.165  5       
+{key/counting/counter__i1/CK   key/counting/counter__i0/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(14.156)  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                   32.810  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i7/Q  (SLICE_R10C11B)
+Path End         : key/counting/counter__i3/D  (SLICE_R10C9B)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 3
+Delay Ratio      : 73.3% (route), 26.7% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 32.810 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  5       
+key/counting/int_osc                                         NET DELAY           5.499                  5.499  5       
+{key/counting/counter__i7/CK   key/counting/counter__i6/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+key/counting/counter__i7/CK->key/counting/counter__i7/Q
+                                          SLICE_R10C11B      CLK_TO_Q0_DELAY     1.388                  6.887  7       
+key/counting/count[7]                                        NET DELAY           3.265                 10.152  7       
+key/counting/i302_3_lut_4_lut/C->key/counting/i302_3_lut_4_lut/Z
+                                          SLICE_R10C8C       B1_TO_F1_DELAY      0.449                 10.601  7       
+key/counting/n319                                            NET DELAY           3.080                 13.681  7       
+key/counting/i1_2_lut_adj_3/A->key/counting/i1_2_lut_adj_3/Z
+                                          SLICE_R10C9B       B0_TO_F0_DELAY      0.476                 14.157  1       
+key/counting/n39[3]                                          NET DELAY           0.000                 14.157  1       
+key/counting/counter__i3/D                                   ENDPOINT            0.000                 14.157  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+                                                             CONSTRAINT          0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  5       
+key/counting/int_osc                                         NET DELAY           5.499                 47.165  5       
+{key/counting/counter__i3/CK   key/counting/counter__i2/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(14.156)  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                   32.810  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i7/Q  (SLICE_R10C11B)
+Path End         : key/counting/counter__i0/D  (SLICE_R10C9A)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 3
+Delay Ratio      : 73.1% (route), 26.9% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 32.863 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  5       
+key/counting/int_osc                                         NET DELAY           5.499                  5.499  5       
+{key/counting/counter__i7/CK   key/counting/counter__i6/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+key/counting/counter__i7/CK->key/counting/counter__i7/Q
+                                          SLICE_R10C11B      CLK_TO_Q0_DELAY     1.388                  6.887  7       
+key/counting/count[7]                                        NET DELAY           3.265                 10.152  7       
+key/counting/i302_3_lut_4_lut/C->key/counting/i302_3_lut_4_lut/Z
+                                          SLICE_R10C8C       B1_TO_F1_DELAY      0.449                 10.601  7       
+key/counting/n319                                            NET DELAY           3.027                 13.628  7       
+key/counting/i1_2_lut_adj_9/A->key/counting/i1_2_lut_adj_9/Z
+                                          SLICE_R10C9A       C1_TO_F1_DELAY      0.476                 14.104  1       
+key/counting/n39[0]                                          NET DELAY           0.000                 14.104  1       
+key/counting/counter__i0/D                                   ENDPOINT            0.000                 14.104  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+                                                             CONSTRAINT          0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  5       
+key/counting/int_osc                                         NET DELAY           5.499                 47.165  5       
+{key/counting/counter__i1/CK   key/counting/counter__i0/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(14.103)  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                   32.863  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i7/Q  (SLICE_R10C11B)
+Path End         : key/counting/counter__i2/D  (SLICE_R10C9B)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 3
+Delay Ratio      : 73.1% (route), 26.9% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 32.863 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  5       
+key/counting/int_osc                                         NET DELAY           5.499                  5.499  5       
+{key/counting/counter__i7/CK   key/counting/counter__i6/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+key/counting/counter__i7/CK->key/counting/counter__i7/Q
+                                          SLICE_R10C11B      CLK_TO_Q0_DELAY     1.388                  6.887  7       
+key/counting/count[7]                                        NET DELAY           3.265                 10.152  7       
+key/counting/i302_3_lut_4_lut/C->key/counting/i302_3_lut_4_lut/Z
+                                          SLICE_R10C8C       B1_TO_F1_DELAY      0.449                 10.601  7       
+key/counting/n319                                            NET DELAY           3.027                 13.628  7       
+key/counting/i1_2_lut/A->key/counting/i1_2_lut/Z
+                                          SLICE_R10C9B       C1_TO_F1_DELAY      0.476                 14.104  1       
+key/counting/n39[2]                                          NET DELAY           0.000                 14.104  1       
+key/counting/counter__i2/D                                   ENDPOINT            0.000                 14.104  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+                                                             CONSTRAINT          0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  5       
+key/counting/int_osc                                         NET DELAY           5.499                 47.165  5       
+{key/counting/counter__i3/CK   key/counting/counter__i2/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(14.103)  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                   32.863  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i2/Q  (SLICE_R10C9B)
+Path End         : key/counting/counter__i4/D  (SLICE_R10C9D)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 5
+Delay Ratio      : 65.1% (route), 34.9% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 33.022 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  5       
+key/counting/int_osc                                         NET DELAY               5.499                  5.499  5       
+{key/counting/counter__i3/CK   key/counting/counter__i2/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+key/counting/counter__i2/CK->key/counting/counter__i2/Q
+                                          SLICE_R10C9B       CLK_TO_Q1_DELAY         1.388                  6.887  7       
+key/counting/count[2]                                        NET DELAY               2.670                  9.557  7       
+key/counting/add_11_add_5_3/B1->key/counting/add_11_add_5_3/CO1
+                                          SLICE_R10C10B      B1_TO_COUT1_DELAY       0.357                  9.914  2       
+key/counting/n447                                            NET DELAY               0.000                  9.914  2       
+key/counting/add_11_add_5_5/CI0->key/counting/add_11_add_5_5/CO0
+                                          SLICE_R10C10C      CIN0_TO_COUT0_DELAY     0.277                 10.191  2       
+key/counting/n637                                            NET DELAY               0.661                 10.852  2       
+key/counting/add_11_add_5_5/D1->key/counting/add_11_add_5_5/S1
+                                          SLICE_R10C10C      D1_TO_F1_DELAY          0.449                 11.301  1       
+key/counting/n47[4]                                          NET DELAY               2.168                 13.469  1       
+key/counting/i1_4_lut_adj_7/C->key/counting/i1_4_lut_adj_7/Z
+                                          SLICE_R10C9D       D0_TO_F0_DELAY          0.476                 13.945  1       
+key/counting/n512                                            NET DELAY               0.000                 13.945  1       
+key/counting/counter__i4/D                                   ENDPOINT                0.000                 13.945  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  5       
+key/counting/int_osc                                         NET DELAY               5.499                 47.165  5       
+{key/counting/counter__i4/CK   key/counting/counter__i5/CK}
+                                                             CLOCK PIN               0.000                 47.165  1       
+                                                             Uncertainty          -(0.000)                 47.165  
+                                                             Setup time           -(0.198)                 46.967  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              46.967  
+Arrival Time                                                                                            -(13.944)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                       33.022  
+
+
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
                     End of Detailed Report for timing paths 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
@@ -159,11 +700,22 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 3.1  Endpoint slacks
 =======================
---------------------------------------------------
-There is no end point satisfying reporting criteria
-
-Total Negative Slack: 0
-
+-------------------------------------------------------
+          Listing 8 End Points           |    Slack    
+-------------------------------------------------------
+key/counting/counter__i4/D               |    2.306 ns 
+key/counting/counter__i1/D               |    3.143 ns 
+key/counting/counter__i0/D               |    3.143 ns 
+key/counting/counter__i3/D               |    3.143 ns 
+key/counting/counter__i5/D               |    3.143 ns 
+key/counting/counter__i7/D               |    3.143 ns 
+key/counting/counter__i2/D               |    3.477 ns 
+key/counting/counter__i6/D               |    3.477 ns 
+-------------------------------------------------------
+                                         |             
+Hold # of endpoints with negative slack: |           0 
+                                         |             
+-------------------------------------------------------
 
 3.2  Detailed Report
 =======================
@@ -178,6 +730,451 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
                     Detailed Report for timing paths 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i6/Q  (SLICE_R10C11B)
+Path End         : key/counting/counter__i4/D  (SLICE_R10C9D)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 2
+Delay Ratio      : 55.3% (route), 44.7% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 2.306 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i7/CK   key/counting/counter__i6/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+key/counting/counter__i6/CK->key/counting/counter__i6/Q
+                                          SLICE_R10C11B      CLK_TO_Q1_DELAY  0.779                  3.863  7       
+key/counting/count[6]                                        NET DELAY        1.275                  5.138  7       
+key/counting/i1_4_lut_adj_7/D->key/counting/i1_4_lut_adj_7/Z
+                                          SLICE_R10C9D       B0_TO_F0_DELAY   0.252                  5.390  1       
+key/counting/n512                                            NET DELAY        0.000                  5.390  1       
+key/counting/counter__i4/D                                   ENDPOINT         0.000                  5.390  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i4/CK   key/counting/counter__i5/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         5.390  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 2.306  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i1/Q  (SLICE_R10C9A)
+Path End         : key/counting/counter__i1/D  (SLICE_R10C9A)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 3
+Delay Ratio      : 58.7% (route), 41.3% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.143 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i1/CK   key/counting/counter__i0/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+key/counting/counter__i1/CK->key/counting/counter__i1/Q
+                                          SLICE_R10C9A       CLK_TO_Q0_DELAY  0.779                  3.863  5       
+key/counting/count[1]                                        NET DELAY        0.912                  4.775  5       
+key/counting/add_11_add_5_3/B0->key/counting/add_11_add_5_3/S0
+                                          SLICE_R10C10B      B0_TO_F0_DELAY   0.266                  5.041  1       
+key/counting/n47[1]                                          NET DELAY        0.934                  5.975  1       
+key/counting/i1_2_lut_adj_8/B->key/counting/i1_2_lut_adj_8/Z
+                                          SLICE_R10C9A       D0_TO_F0_DELAY   0.252                  6.227  1       
+key/counting/n39[1]                                          NET DELAY        0.000                  6.227  1       
+key/counting/counter__i1/D                                   ENDPOINT         0.000                  6.227  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i1/CK   key/counting/counter__i0/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.227  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.143  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i0/Q  (SLICE_R10C9A)
+Path End         : key/counting/counter__i0/D  (SLICE_R10C9A)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 3
+Delay Ratio      : 58.7% (route), 41.3% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.143 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i1/CK   key/counting/counter__i0/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+key/counting/counter__i0/CK->key/counting/counter__i0/Q
+                                          SLICE_R10C9A       CLK_TO_Q1_DELAY  0.779                  3.863  2       
+key/counting/count[0]                                        NET DELAY        0.912                  4.775  2       
+key/counting/add_11_add_5_1/B1->key/counting/add_11_add_5_1/S1
+                                          SLICE_R10C10A      B1_TO_F1_DELAY   0.266                  5.041  1       
+key/counting/n47[0]                                          NET DELAY        0.934                  5.975  1       
+key/counting/i1_2_lut_adj_9/B->key/counting/i1_2_lut_adj_9/Z
+                                          SLICE_R10C9A       D1_TO_F1_DELAY   0.252                  6.227  1       
+key/counting/n39[0]                                          NET DELAY        0.000                  6.227  1       
+key/counting/counter__i0/D                                   ENDPOINT         0.000                  6.227  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i1/CK   key/counting/counter__i0/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.227  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.143  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i3/Q  (SLICE_R10C9B)
+Path End         : key/counting/counter__i3/D  (SLICE_R10C9B)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 3
+Delay Ratio      : 58.7% (route), 41.3% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.143 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i3/CK   key/counting/counter__i2/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+key/counting/counter__i3/CK->key/counting/counter__i3/Q
+                                          SLICE_R10C9B       CLK_TO_Q0_DELAY  0.779                  3.863  5       
+key/counting/count[3]                                        NET DELAY        0.912                  4.775  5       
+key/counting/add_11_add_5_5/B0->key/counting/add_11_add_5_5/S0
+                                          SLICE_R10C10C      B0_TO_F0_DELAY   0.266                  5.041  1       
+key/counting/n47[3]                                          NET DELAY        0.934                  5.975  1       
+key/counting/i1_2_lut_adj_3/B->key/counting/i1_2_lut_adj_3/Z
+                                          SLICE_R10C9B       D0_TO_F0_DELAY   0.252                  6.227  1       
+key/counting/n39[3]                                          NET DELAY        0.000                  6.227  1       
+key/counting/counter__i3/D                                   ENDPOINT         0.000                  6.227  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i3/CK   key/counting/counter__i2/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.227  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.143  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i5/Q  (SLICE_R10C9D)
+Path End         : key/counting/counter__i5/D  (SLICE_R10C9D)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 3
+Delay Ratio      : 58.7% (route), 41.3% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.143 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i4/CK   key/counting/counter__i5/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+key/counting/counter__i5/CK->key/counting/counter__i5/Q
+                                          SLICE_R10C9D       CLK_TO_Q1_DELAY  0.779                  3.863  9       
+key/counting/count[5]                                        NET DELAY        0.912                  4.775  9       
+key/counting/add_11_add_5_7/B0->key/counting/add_11_add_5_7/S0
+                                          SLICE_R10C10D      B0_TO_F0_DELAY   0.266                  5.041  1       
+key/counting/n47[5]                                          NET DELAY        0.934                  5.975  1       
+key/counting/i1_2_lut_adj_4/B->key/counting/i1_2_lut_adj_4/Z
+                                          SLICE_R10C9D       D1_TO_F1_DELAY   0.252                  6.227  1       
+key/counting/n39[5]                                          NET DELAY        0.000                  6.227  1       
+key/counting/counter__i5/D                                   ENDPOINT         0.000                  6.227  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i4/CK   key/counting/counter__i5/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.227  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.143  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i7/Q  (SLICE_R10C11B)
+Path End         : key/counting/counter__i7/D  (SLICE_R10C11B)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 3
+Delay Ratio      : 58.7% (route), 41.3% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.143 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i7/CK   key/counting/counter__i6/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+key/counting/counter__i7/CK->key/counting/counter__i7/Q
+                                          SLICE_R10C11B      CLK_TO_Q0_DELAY  0.779                  3.863  7       
+key/counting/count[7]                                        NET DELAY        0.912                  4.775  7       
+key/counting/add_11_add_5_9/B0->key/counting/add_11_add_5_9/S0
+                                          SLICE_R10C11A      B0_TO_F0_DELAY   0.266                  5.041  1       
+key/counting/n47[7]                                          NET DELAY        0.934                  5.975  1       
+key/counting/i1_2_lut_adj_10/B->key/counting/i1_2_lut_adj_10/Z
+                                          SLICE_R10C11B      D0_TO_F0_DELAY   0.252                  6.227  1       
+key/counting/n39[7]                                          NET DELAY        0.000                  6.227  1       
+key/counting/counter__i7/D                                   ENDPOINT         0.000                  6.227  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i7/CK   key/counting/counter__i6/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.227  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.143  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i5/Q  (SLICE_R10C9D)
+Path End         : key/counting/counter__i2/D  (SLICE_R10C9B)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 3
+Delay Ratio      : 62.7% (route), 37.3% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.477 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i4/CK   key/counting/counter__i5/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+key/counting/counter__i5/CK->key/counting/counter__i5/Q
+                                          SLICE_R10C9D       CLK_TO_Q1_DELAY  0.779                  3.863  9       
+key/counting/count[5]                                        NET DELAY        0.712                  4.575  9       
+key/counting/i302_3_lut_4_lut/A->key/counting/i302_3_lut_4_lut/Z
+                                          SLICE_R10C8C       D1_TO_F1_DELAY   0.266                  4.841  7       
+key/counting/n319                                            NET DELAY        1.468                  6.309  7       
+key/counting/i1_2_lut/A->key/counting/i1_2_lut/Z
+                                          SLICE_R10C9B       C1_TO_F1_DELAY   0.252                  6.561  1       
+key/counting/n39[2]                                          NET DELAY        0.000                  6.561  1       
+key/counting/counter__i2/D                                   ENDPOINT         0.000                  6.561  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i3/CK   key/counting/counter__i2/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.561  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.477  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key/counting/counter__i5/Q  (SLICE_R10C9D)
+Path End         : key/counting/counter__i6/D  (SLICE_R10C11B)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 3
+Delay Ratio      : 62.7% (route), 37.3% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.477 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i4/CK   key/counting/counter__i5/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+key/counting/counter__i5/CK->key/counting/counter__i5/Q
+                                          SLICE_R10C9D       CLK_TO_Q1_DELAY  0.779                  3.863  9       
+key/counting/count[5]                                        NET DELAY        0.712                  4.575  9       
+key/counting/i302_3_lut_4_lut/A->key/counting/i302_3_lut_4_lut/Z
+                                          SLICE_R10C8C       D1_TO_F1_DELAY   0.266                  4.841  7       
+key/counting/n319                                            NET DELAY        1.468                  6.309  7       
+key/counting/i1_2_lut_adj_6/A->key/counting/i1_2_lut_adj_6/Z
+                                          SLICE_R10C11B      C1_TO_F1_DELAY   0.252                  6.561  1       
+key/counting/n39[6]                                          NET DELAY        0.000                  6.561  1       
+key/counting/counter__i6/D                                   ENDPOINT         0.000                  6.561  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  6       
+key/counting/int_osc                                         NET DELAY        3.084                  3.084  6       
+{key/counting/counter__i7/CK   key/counting/counter__i6/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.561  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.477  
+
+
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
                     End of Detailed Report for timing paths 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 

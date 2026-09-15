@@ -15,6 +15,12 @@
         <Source name="source/impl_1/unused_code.sv" type="Verilog" type_short="Verilog" excluded="TRUE">
             <Options VerilogStandard="System Verilog"/>
         </Source>
+        <Source name="source/impl_1/lab2_keypad_tb.sv" type="Verilog" type_short="Verilog" excluded="TRUE">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
+        <Source name="source/impl_1/keypad_tb.sv" type="Verilog" type_short="Verilog" excluded="TRUE">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
         <Source name="keypad_pinout.pdc" type="Physical Constraints File" type_short="PDC">
             <Options/>
         </Source>

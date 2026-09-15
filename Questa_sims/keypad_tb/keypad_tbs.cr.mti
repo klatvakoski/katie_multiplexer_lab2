@@ -1,0 +1,41 @@
+C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad.sv {1 {vlog -work work -vopt -sv -stats=none {C:\Users\klatvakoski\Documents\GitHub\katie_multiplexer_lab2\Radiant_files\lab2_v2kl\lab2_v2kl\source\impl_1\keypad.sv}
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+-- Compiling module keypad
+
+Top level modules:
+	keypad
+
+} {} {}} C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/lab2_keypad.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/lab2_keypad.sv
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+-- Compiling module lab2_keypad
+
+Top level modules:
+	lab2_keypad
+
+} {} {}} C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/keypad_tb.sv {1 {vlog -work work -vopt -sv -stats=none {C:\Users\klatvakoski\Documents\GitHub\katie_multiplexer_lab2\Radiant_files\lab2_v2kl\lab2_v2kl\source\impl_1\keypad_tb.sv}
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+-- Compiling module keypad_tb
+
+Top level modules:
+	keypad_tb
+
+} {} {}} C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/lab2_keypad_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/lab2_keypad_tb.sv
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+-- Compiling module lab2_keypad_tb
+
+Top level modules:
+	lab2_keypad_tb
+
+} {} {}} C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/counter.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/counter.sv
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Questa_sims/keypad_tb/keypad_tbs.mpf' is used as the ini file.
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}}
