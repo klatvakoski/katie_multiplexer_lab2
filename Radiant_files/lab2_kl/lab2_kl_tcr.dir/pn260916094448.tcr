@@ -1,0 +1,6 @@
+#Start recording tcl command: 9/16/2026 09:41:52
+#Project Location: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl; Project name: lab2_kl
+prj_open "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/lab2_kl.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/16/2026 09:44:48
