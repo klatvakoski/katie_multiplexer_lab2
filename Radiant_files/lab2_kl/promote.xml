@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<userSetting name="C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/promote.xml" version="Diamond (64-bit) 2026.1.0.37.0" date="Mon Sep 14 16:17:17 2026" vendor="Lattice Semiconductor Corporation" >
+<userSetting name="C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/promote.xml" version="Diamond (64-bit) 2026.1.0.37.0" date="Wed Sep 16 09:42:41 2026" vendor="Lattice Semiconductor Corporation" >
   <msg mid="35901328" type="Info" internal="true" />
-  <msg mid="2044344" type="Error" internal="true" />
-  <msg mid="35901137" type="Warning" internal="true" />
   <msg mid="35901209" type="Warning" internal="true" />
+  <msg mid="35901137" type="Warning" internal="true" />
+  <msg mid="2044344" type="Error" internal="true" />
   <msg mid="35901188" type="Warning" internal="true" />
   <msg mid="2043072" type="Error" internal="true" />
   <msg mid="2043128" type="Error" internal="true" />
@@ -12,10 +12,10 @@
   <msg mid="35901899" type="Warning" internal="true" />
   <msg mid="35931002" type="Warning" internal="true" />
   <msg mid="2043137" type="Error" internal="true" />
-  <msg mid="2043063" type="Warning" internal="true" />
   <msg mid="2043188" type="Error" internal="true" />
-  <msg mid="2043952" type="Error" internal="true" />
+  <msg mid="2043063" type="Warning" internal="true" />
   <msg mid="2043372" type="Warning" internal="true" />
+  <msg mid="2043952" type="Error" internal="true" />
   <msg mid="2043203" type="Warning" internal="true" />
   <msg mid="2043328" type="Info" internal="true" />
   <msg mid="2044320" type="Info" internal="true" />

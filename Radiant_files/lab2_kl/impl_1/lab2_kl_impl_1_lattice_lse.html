@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Sep 12 20:47:24 2026
+Wed Sep 16 09:42:18 2026
 
 
 Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/impl_1/lab2_kl_impl_1_lattice.synproj -logfile lab2_kl_impl_1_lattice.srp -gui -msgset C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_kl/promote.xml 
@@ -182,10 +182,9 @@ Analyzing Verilog file ../source/impl_1/mux.sv. VERI-1482
 Top module name (Verilog): lab2_kl
 INFO <35901018> - synthesis: ../source/impl_1/lab2_kl.sv(2): compiling module lab2_kl. VERI-1018
 INFO <35901018> - synthesis: C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
-INFO <35901018> - synthesis: ../source/impl_1/counter.sv(2): compiling module counter. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/counter.sv(2): compiling module counter(MAX_COUNT=240000). VERI-1018
 WARNING <35901209> - synthesis: ../source/impl_1/counter.sv(21): expression size 32 truncated to fit in target size 18. VERI-1209
 INFO <35901018> - synthesis: ../source/impl_1/mux.sv(1): compiling module mux. VERI-1018
-INFO <35901018> - synthesis: ../source/impl_1/mux.sv(1): compiling module mux(WIDTH=2). VERI-1018
 INFO <35901018> - synthesis: ../source/impl_1/led_display.sv(1): compiling module led_display. VERI-1018
 
 <A name="lse_parameter"></A><B><U><big>Parameter Setting</big></U></B>
@@ -198,16 +197,12 @@ INFO <35901018> - synthesis: ../source/impl_1/led_display.sv(1): compiling modul
 
 	[Parameter Settings for Instance(s): counting]
 	(Module: counter)
-		MAX_COUNT                 120000
+		MAX_COUNT                 240000
 		WIDTH                     18
 
 	[Parameter Settings for Instance(s): choose_dip]
 	(Module: mux)
 		WIDTH                     4
-
-	[Parameter Settings for Instance(s): choose_pin]
-	(Module: mux)
-		WIDTH                     2
 
 [Parameter Setting Section End]
 
@@ -237,12 +232,12 @@ WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[0]
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (lab2_kl)######################
-Number of register bits => 19 of 5280 (0 % )
+Number of register bits => 18 of 5280 (0 % )
 CCU2 => 10
-FD1P3XZ => 19
+FD1P3XZ => 18
 HSOSC_CORE => 1
 IB => 10
-LUT4 => 37
+LUT4 => 42
 OB => 9
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
@@ -259,16 +254,16 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n23, loads : 29
-  Net : n246, loads : 20
-  Net : n78, loads : 19
-  Net : n25, loads : 12
+  Net : counting/n403, loads : 27
+  Net : chosen_pin_c_0, loads : 20
+  Net : n257, loads : 19
+  Net : n243, loads : 18
+  Net : chosen_pin_c_0_N_19, loads : 15
+  Net : n28, loads : 12
   Net : counting/n39[17], loads : 12
-  Net : counting/n39[9], loads : 12
-  Net : counting/n39[16], loads : 12
-  Net : counting/n39[10], loads : 12
-  Net : counting/n39[11], loads : 12
-  Net : counting/n39[0], loads : 12
+  Net : counting/n39[4], loads : 11
+  Net : counting/n39[13], loads : 11
+  Net : counting/n39[1], loads : 11
 ################### End Clock Report ##################
 
 
@@ -280,13 +275,13 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 89 MB
+Peak Memory Usage: 88 MB
 
 --------------------------------------------------------------
 Total CPU Time: 0 secs 
 Total REAL Time: 3 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: e1d1488d71d17735522c57534254cf976d9cb8e2
+Checksum -- synthesis -- netlist: 825092ea7ddc0461d7f63fbe2a4a2901932e8e5
 
 
 

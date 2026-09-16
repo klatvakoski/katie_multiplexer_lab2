@@ -1,48 +1,40 @@
 ----------------------------------------------------------------------
 Report for cell lab2_kl.TECH
-Register bits:  19 of 5280 (0.360%)
+Register bits:  18 of 5280 (0.341%)
 I/O cells:      19
                                   Cell usage:
                                cell     count   Res Usage(%)
                                CCU2        10          100.0
-                            FD1P3XZ        19          100.0
+                            FD1P3XZ        18          100.0
                          HSOSC_CORE         1          100.0
                                  IB        10          100.0
-                               LUT4        37          100.0
+                               LUT4        42          100.0
                                  OB         9          100.0
 SUB MODULES
-                            counter         1
+          counter(MAX_COUNT=240000)         1
                         led_display         1
                                 mux         1
-                       mux(WIDTH=2)         1
-                              TOTAL        90
-----------------------------------------------------------------------
-Report for cell mux.v1
-Instance Path : choose_dip
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         4           10.8
-                              TOTAL         4
+                              TOTAL        93
 ----------------------------------------------------------------------
 Report for cell led_display.v1
 Instance Path : seven_disp
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4         7           18.9
+                               LUT4         7           16.7
                               TOTAL         7
 ----------------------------------------------------------------------
-Report for cell mux(WIDTH=2).v1
-Instance Path : choose_pin
+Report for cell mux.v1
+Instance Path : choose_dip
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4         1            2.7
-                              TOTAL         1
+                               LUT4         4            9.5
+                              TOTAL         4
 ----------------------------------------------------------------------
-Report for cell counter.v1
+Report for cell counter(MAX_COUNT=240000).v1
 Instance Path : counting
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2        10          100.0
-                            FD1P3XZ        18           94.7
-                               LUT4        18           48.6
-                              TOTAL        46
+                            FD1P3XZ        18          100.0
+                               LUT4        21           50.0
+                              TOTAL        49

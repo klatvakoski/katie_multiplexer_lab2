@@ -3,44 +3,36 @@ Report for cell lab2_kl
    Instance path: lab2_kl
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         58        100.0
-                               LUTGATE	         38        100.0
+                                  LUT4	         63        100.0
+                               LUTGATE	         43        100.0
                                 LUTCCU	         20        100.0
                                  IOBUF	         19        100.0
-                                PFUREG	         19        100.0
+                                PFUREG	         18        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                               counter	          1        65.5
-                           led_display	          1        12.1
-                                   mux	          1         6.9
-                          mux(WIDTH=2)	          1         1.7
----------------------------------------------------
-Report for cell mux
-   Instance path: lab2_kl/choose_dip
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          4         6.9
-                               LUTGATE	          4        10.5
+             counter(MAX_COUNT=240000)	          1        65.1
+                           led_display	          1        11.1
+                                   mux	          1         6.3
 ---------------------------------------------------
 Report for cell led_display
    Instance path: lab2_kl/seven_disp
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          7        12.1
-                               LUTGATE	          7        18.4
+                                  LUT4	          7        11.1
+                               LUTGATE	          7        16.3
 ---------------------------------------------------
-Report for cell mux(WIDTH=2)
-   Instance path: lab2_kl/choose_pin
+Report for cell mux
+   Instance path: lab2_kl/choose_dip
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          1         1.7
-                               LUTGATE	          1         2.6
+                                  LUT4	          4         6.3
+                               LUTGATE	          4         9.3
 ---------------------------------------------------
-Report for cell counter
+Report for cell counter(MAX_COUNT=240000)
    Instance path: lab2_kl/counting
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         38        65.5
-                               LUTGATE	         18        47.4
+                                  LUT4	         41        65.1
+                               LUTGATE	         21        48.8
                                 LUTCCU	         20        100.0
-                                PFUREG	         18        94.7
+                                PFUREG	         18        100.0
