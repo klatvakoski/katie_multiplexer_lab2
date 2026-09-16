@@ -5,8 +5,8 @@ module keypad(
 	output	logic [3:0]row
 	); 
 	
-	localparam MAX_COUNT = 120; //6000000;
-	localparam WIDTH = 8; //24;
+	localparam MAX_COUNT = 6000000;
+	localparam WIDTH = 24;
 	logic [WIDTH-1:0] count; 
 	
 	counter #(MAX_COUNT,WIDTH) counting(reset, enable, int_osc, count);

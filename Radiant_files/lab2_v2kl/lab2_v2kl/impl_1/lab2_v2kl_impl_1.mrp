@@ -8,7 +8,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2026.1.0.37.0
-Mapped on: Mon Sep 14 18:18:47 2026
+Mapped on: Wed Sep 16 16:00:30 2026
 
 Design Information
 ------------------
@@ -22,11 +22,11 @@ Command line:   map -pdc C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer
 Design Summary
 --------------
 
-   Number of slice registers:   8 out of  5280 (<1%)
+   Number of slice registers:  24 out of  5280 (<1%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:            39 out of  5280 (1%)
-      Number of logic LUT4s:              29
-      Number of ripple logic:              5 (10 LUT4s)
+   Number of LUT4s:            96 out of  5280 (2%)
+      Number of logic LUT4s:              70
+      Number of ripple logic:             13 (26 LUT4s)
    Number of IO sites used:   14 out of 39 (36%)
       Number of IO sites used for general PIO: 14
       Number of IO sites used for I3C: 0 out of 2 (0%)
@@ -49,17 +49,17 @@ Design Summary
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net int_osc: 8 loads, 8 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
+      Net int_osc: 24 loads, 24 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
    Number of Clock Enables:  2
       Net VCC_net: 1 loads, 0 SLICEs
-      Net n184: 8 loads, 8 SLICEs
+      Net n429: 24 loads, 24 SLICEs
    Number of LSRs:  1
-      Net n177: 8 loads, 8 SLICEs
+      Net n406: 24 loads, 24 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net key.counting.count[5]: 9 loads
-      Net n177: 8 loads
-      Net n184: 8 loads
-      Net key.counting.count[2]: 7 loads
+      Net key.counting.n4: 24 loads
+      Net n406: 24 loads
+      Net n429: 24 loads
+      Net key.count[21]: 8 loads
 
                                     Page 1
 
@@ -69,12 +69,12 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net key.counting.count[6]: 7 loads
-      Net key.counting.count[7]: 7 loads
-      Net key.counting.n319: 7 loads
-      Net key.counting.count[1]: 5 loads
-      Net key.counting.count[3]: 5 loads
-      Net key.counting.count[4]: 5 loads
+      Net key.count[19]: 7 loads
+      Net key.count[20]: 7 loads
+      Net key.count[22]: 7 loads
+      Net key.count[23]: 7 loads
+      Net key.count[10]: 6 loads
+      Net key.count[15]: 6 loads
 
 
 
@@ -96,33 +96,33 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| led[3]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| row[3]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| led[2]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| col[0]              | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| col[1]              | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| col[2]              | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| col[3]              | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| enable              | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| row[2]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| led[1]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
 | led[0]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | reset               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| enable              | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| col[3]              | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| col[2]              | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| col[1]              | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| col[0]              | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| row[3]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| row[2]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 | row[1]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | row[0]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| led[3]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| led[2]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| led[1]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
 
@@ -166,8 +166,8 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 65 MB
-Checksum -- map: 8cab68b9c282b5b89309803e86341041f03f01fe
+   Peak Memory Usage: 66 MB
+Checksum -- map: 9ffaa6ceeb8110be9658560fb36b07bdab0e1e1
 
 
 

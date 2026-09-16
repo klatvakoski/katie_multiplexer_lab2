@@ -1,36 +1,36 @@
 ----------------------------------------------------------------------
 Report for cell lab2_keypad.TECH
-Register bits:  8 of 5280 (0.152%)
+Register bits:  24 of 5280 (0.455%)
 I/O cells:      14
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2         5          100.0
-                            FD1P3XZ         8          100.0
+                               CCU2        13          100.0
+                            FD1P3XZ        24          100.0
                          HSOSC_CORE         1          100.0
                                  IB         6          100.0
-                               LUT4        28          100.0
+                               LUT4        69          100.0
                                  OB         8          100.0
 SUB MODULES
-     counter(MAX_COUNT=120,WIDTH=8)         1
+counter(MAX_COUNT=6000000,WIDTH=24)         1
                              keypad         1
-                              TOTAL        58
+                              TOTAL       123
 ----------------------------------------------------------------------
 Report for cell keypad.v1
 Instance Path : key
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2         5          100.0
-                            FD1P3XZ         8          100.0
-                               LUT4        22           78.6
+                                FA2        13          100.0
+                            FD1P3XZ        24          100.0
+                               LUT4        63           91.3
 SUB MODULES
-     counter(MAX_COUNT=120,WIDTH=8)         1
-                              TOTAL        36
+counter(MAX_COUNT=6000000,WIDTH=24)         1
+                              TOTAL       101
 ----------------------------------------------------------------------
-Report for cell counter(MAX_COUNT=120,WIDTH=8).v1
+Report for cell counter(MAX_COUNT=6000000,WIDTH=24).v1
 Instance Path : key.counting
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2         5          100.0
-                            FD1P3XZ         8          100.0
-                               LUT4        22           78.6
-                              TOTAL        35
+                                FA2        13          100.0
+                            FD1P3XZ        24          100.0
+                               LUT4        25           36.2
+                              TOTAL        62

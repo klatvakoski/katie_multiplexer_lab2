@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Sep 14 18:18:40 2026
+Wed Sep 16 16:00:22 2026
 
 
 Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/impl_1/lab2_v2kl_impl_1_lattice.synproj -logfile lab2_v2kl_impl_1_lattice.srp -gui -msgset C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab2_v2kl/promote.xml 
@@ -181,8 +181,8 @@ Top module name (Verilog): lab2_keypad
 INFO <35901018> - synthesis: ../source/impl_1/lab2_keypad.sv(2): compiling module lab2_keypad. VERI-1018
 INFO <35901018> - synthesis: C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
 INFO <35901018> - synthesis: ../source/impl_1/keypad.sv(1): compiling module keypad. VERI-1018
-INFO <35901018> - synthesis: ../source/impl_1/counter.sv(2): compiling module counter(MAX_COUNT=120,WIDTH=8). VERI-1018
-WARNING <35901209> - synthesis: ../source/impl_1/counter.sv(20): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO <35901018> - synthesis: ../source/impl_1/counter.sv(2): compiling module counter(MAX_COUNT=6000000,WIDTH=24). VERI-1018
+WARNING <35901209> - synthesis: ../source/impl_1/counter.sv(20): expression size 32 truncated to fit in target size 24. VERI-1209
 
 <A name="lse_parameter"></A><B><U><big>Parameter Setting</big></U></B>
 
@@ -194,8 +194,8 @@ WARNING <35901209> - synthesis: ../source/impl_1/counter.sv(20): expression size
 
 	[Parameter Settings for Instance(s): counting]
 	(Module: counter)
-		MAX_COUNT                 120
-		WIDTH                     8
+		MAX_COUNT                 6000000
+		WIDTH                     24
 
 [Parameter Setting Section End]
 
@@ -220,12 +220,12 @@ WARNING <35002062> - synthesis: Port rejected for I/O register mapping: led[0]
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (lab2_keypad)######################
-Number of register bits => 8 of 5280 (0 % )
-CCU2 => 5
-FD1P3XZ => 8
+Number of register bits => 24 of 5280 (0 % )
+CCU2 => 13
+FD1P3XZ => 24
 HSOSC_CORE => 1
 IB => 6
-LUT4 => 28
+LUT4 => 69
 OB => 8
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
@@ -242,16 +242,16 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n184, loads : 9
-  Net : key/counting/count[5], loads : 9
-  Net : key/counting/n319, loads : 9
-  Net : n177, loads : 8
-  Net : key/counting/count[6], loads : 7
-  Net : key/counting/count[7], loads : 7
-  Net : key/counting/n39[7], loads : 7
-  Net : key/counting/count[2], loads : 7
-  Net : key/counting/n39[6], loads : 6
-  Net : key/counting/n39[3], loads : 6
+  Net : key/counting/n4, loads : 36
+  Net : n429, loads : 25
+  Net : n406, loads : 24
+  Net : key/n20, loads : 16
+  Net : key/n678, loads : 15
+  Net : key/n686, loads : 15
+  Net : key/counting/n39[23], loads : 15
+  Net : key/counting/n39[13], loads : 14
+  Net : key/counting/n39[9], loads : 14
+  Net : key/counting/n39[22], loads : 14
 ################### End Clock Report ##################
 
 
@@ -263,13 +263,13 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 87 MB
+Peak Memory Usage: 88 MB
 
 --------------------------------------------------------------
 Total CPU Time: 0 secs 
 Total REAL Time: 3 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: d0ae245c87bf6a80266040bd76a3d616ac918f0a
+Checksum -- synthesis -- netlist: 9459abbaca261cbdd42c2c6cd474a3e96f6aa133
 
 
 

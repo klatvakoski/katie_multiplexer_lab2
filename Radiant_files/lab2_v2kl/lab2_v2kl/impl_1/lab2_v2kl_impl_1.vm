@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2026.1.0.37.0
-// Netlist written on Mon Sep 14 18:18:43 2026
+// Netlist written on Wed Sep 16 16:00:25 2026
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/users/klatvakoski/documents/github/katie_multiplexer_lab2/radiant_files/lab2_v2kl/lab2_v2kl/source/impl_1/counter.sv"
@@ -93,51 +93,51 @@ module lab2_keypad (input reset, input enable, input [3:0]col, output [3:0]row,
     wire enable_c;
     wire [3:0]col_c;
     wire [3:0]row_c;
-    wire col_c_3__N_17;
-    wire col_c_2__N_18;
-    wire col_c_1__N_19;
-    wire col_c_0__N_20;
+    wire col_c_3__N_33;
+    wire col_c_2__N_34;
+    wire col_c_1__N_35;
+    wire col_c_0__N_36;
     (* is_clock=1 *) wire int_osc;
     
-    wire VCC_net, GND_net, n184, n177;
+    wire VCC_net, GND_net, n429, n406;
     
     VHI i2 (.Z(VCC_net));
     VLO i1 (.Z(GND_net));
-    OB \led_pad[3]  (.I(col_c_3__N_17), .O(led[3]));
-    (* lut_function="(!(A))" *) LUT4 col_c_3__I_0_1_lut (.A(col_c[3]), .Z(col_c_3__N_17));
-    defparam col_c_3__I_0_1_lut.INIT = "0x5555";
-    OB \row_pad[3]  (.I(row_c[3]), .O(row[3]));
-    OB \led_pad[2]  (.I(col_c_2__N_18), .O(led[2]));
-    IB \col_pad[0]  (.I(col[0]), .O(col_c[0]));
-    IB \col_pad[1]  (.I(col[1]), .O(col_c[1]));
-    IB \col_pad[2]  (.I(col[2]), .O(col_c[2]));
-    IB \col_pad[3]  (.I(col[3]), .O(col_c[3]));
+    OB \led_pad[0]  (.I(col_c_0__N_36), .O(led[0]));
+    IB reset_pad (.I(reset), .O(reset_c));
     IB enable_pad (.I(enable), .O(enable_c));
+    IB \col_pad[3]  (.I(col[3]), .O(col_c[3]));
+    IB \col_pad[2]  (.I(col[2]), .O(col_c[2]));
+    IB \col_pad[1]  (.I(col[1]), .O(col_c[1]));
+    IB \col_pad[0]  (.I(col[0]), .O(col_c[0]));
+    OB \row_pad[3]  (.I(row_c[3]), .O(row[3]));
     OB \row_pad[2]  (.I(row_c[2]), .O(row[2]));
-    OB \led_pad[1]  (.I(col_c_1__N_19), .O(led[1]));
-    OB \led_pad[0]  (.I(col_c_0__N_20), .O(led[0]));
-    (* lut_function="(!(A))" *) LUT4 i160_1_lut (.A(reset_c), .Z(n177));
-    defparam i160_1_lut.INIT = "0x5555";
+    OB \row_pad[1]  (.I(row_c[1]), .O(row[1]));
+    OB \row_pad[0]  (.I(row_c[0]), .O(row[0]));
+    OB \led_pad[3]  (.I(col_c_3__N_33), .O(led[3]));
+    OB \led_pad[2]  (.I(col_c_2__N_34), .O(led[2]));
+    OB \led_pad[1]  (.I(col_c_1__N_35), .O(led[1]));
+    (* lut_function="(!(A))" *) LUT4 i373_1_lut (.A(reset_c), .Z(n406));
+    defparam i373_1_lut.INIT = "0x5555";
+    (* lut_function="(A+!(B))" *) LUT4 i395_2_lut (.A(enable_c), .B(reset_c), 
+            .Z(n429));
+    defparam i395_2_lut.INIT = "0xbbbb";
+    (* lut_function="(!(A))" *) LUT4 col_c_1__I_0_1_lut (.A(col_c[1]), .Z(col_c_1__N_35));
+    defparam col_c_1__I_0_1_lut.INIT = "0x5555";
+    (* lut_function="(!(A))" *) LUT4 col_c_2__I_0_1_lut (.A(col_c[2]), .Z(col_c_2__N_34));
+    defparam col_c_2__I_0_1_lut.INIT = "0x5555";
+    (* lut_function="(!(A))" *) LUT4 col_c_0__I_0_1_lut (.A(col_c[0]), .Z(col_c_0__N_36));
+    defparam col_c_0__I_0_1_lut.INIT = "0x5555";
+    (* lut_function="(!(A))" *) LUT4 col_c_3__I_0_1_lut (.A(col_c[3]), .Z(col_c_3__N_33));
+    defparam col_c_3__I_0_1_lut.INIT = "0x5555";
     (* syn_instantiated=1 *) HSOSC_CORE hf_osc (.CLKHFPU(VCC_net), .CLKHFEN(VCC_net), 
             .TRIM9(GND_net), .TRIM8(GND_net), .TRIM7(GND_net), .TRIM6(GND_net), 
             .TRIM5(GND_net), .TRIM4(GND_net), .TRIM3(GND_net), .TRIM2(GND_net), 
             .TRIM1(GND_net), .TRIM0(GND_net), .CLKHF(int_osc));
     defparam hf_osc.CLKHF_DIV = "0b01";
     defparam hf_osc.FABRIC_TRIME = "DISABLE";
-    (* lut_function="(A+!(B))" *) LUT4 i167_2_lut (.A(enable_c), .B(reset_c), 
-            .Z(n184));
-    defparam i167_2_lut.INIT = "0xbbbb";
-    IB reset_pad (.I(reset), .O(reset_c));
-    OB \row_pad[1]  (.I(row_c[1]), .O(row[1]));
-    OB \row_pad[0]  (.I(row_c[0]), .O(row[0]));
-    (* lut_function="(!(A))" *) LUT4 col_c_0__I_0_1_lut (.A(col_c[0]), .Z(col_c_0__N_20));
-    defparam col_c_0__I_0_1_lut.INIT = "0x5555";
-    (* lut_function="(!(A))" *) LUT4 col_c_2__I_0_1_lut (.A(col_c[2]), .Z(col_c_2__N_18));
-    defparam col_c_2__I_0_1_lut.INIT = "0x5555";
-    (* lut_function="(!(A))" *) LUT4 col_c_1__I_0_1_lut (.A(col_c[1]), .Z(col_c_1__N_19));
-    defparam col_c_1__I_0_1_lut.INIT = "0x5555";
-    (* LSE_LINE_FILE_ID=26, LSE_LCOL=11, LSE_RCOL=43, LSE_LLINE=20, LSE_RLINE=20 *) keypad key (n177, 
-            int_osc, n184, {row_c});
+    (* LSE_LINE_FILE_ID=26, LSE_LCOL=11, LSE_RCOL=43, LSE_LLINE=20, LSE_RLINE=20 *) keypad key ({row_c}, 
+            n429, n406, int_osc);
     
 endmodule
 
@@ -145,158 +145,388 @@ endmodule
 // Verilog Description of module keypad
 //
 
-module keypad (input n177, input int_osc, input n184, output [3:0]row_c);
+module keypad (output [3:0]row_c, input n429, input n406, input int_osc);
     
+    wire [23:0]count;
     (* is_clock=1 *) wire int_osc;
     
-    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) \counter(MAX_COUNT=120,WIDTH=8)  counting (n177, 
-            int_osc, n184, {row_c});
+    wire n4, n640, n4_adj_37, n375, n4_adj_38, n403, n616, n10, 
+        n44, n638, n398, n384, n360, n670, n17, n16, n999, 
+        n897, n678, n20, n388, n686, n618, n296, n4_adj_40, 
+        n28, n4_adj_39, n882, n981, n42, n379, n632, n36, n995;
+    
+    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1_4_lut (.A(n640), 
+            .B(count[19]), .C(count[18]), .D(n375), .Z(n4));
+    defparam i1_4_lut.INIT = "0xc8c0";
+    (* lut_function="(A+(B))" *) LUT4 i1_2_lut (.A(count[6]), .B(count[8]), 
+            .Z(n4_adj_38));
+    defparam i1_2_lut.INIT = "0xeeee";
+    (* lut_function="(A (B+(C))+!A (B+(C (D))))" *) LUT4 i606_4_lut (.A(n616), 
+            .B(count[12]), .C(count[11]), .D(count[10]), .Z(n638));
+    defparam i606_4_lut.INIT = "0xfcec";
+    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i638_4_lut (.A(n638), 
+            .B(count[15]), .C(count[14]), .D(count[13]), .Z(n670));
+    defparam i638_4_lut.INIT = "0xc8c0";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i9_4_lut (.A(n17), .B(count[9]), 
+            .C(n16), .D(count[6]), .Z(n897));
+    defparam i9_4_lut.INIT = "0xfffe";
+    (* lut_function="(A (B)+!A (B (C+(D))))" *) LUT4 i646_4_lut (.A(count[17]), 
+            .B(count[18]), .C(n670), .D(count[16]), .Z(n678));
+    defparam i646_4_lut.INIT = "0xccc8";
+    (* lut_function="(!(A (B (C))+!A (B (C+!(D))+!B !(C+(D)))))" *) LUT4 i38_4_lut (.A(n678), 
+            .B(n4), .C(count[20]), .D(count[19]), .Z(n20));
+    defparam i38_4_lut.INIT = "0x3f3a";
+    (* lut_function="(A+((C+!(D))+!B))" *) LUT4 i4_4_lut (.A(n388), .B(count[20]), 
+            .C(n360), .D(count[22]), .Z(n10));
+    defparam i4_4_lut.INIT = "0xfbff";
+    (* lut_function="(!(A+((C+!(D))+!B)))" *) LUT4 i3_4_lut (.A(count[23]), 
+            .B(count[22]), .C(count[21]), .D(n20), .Z(row_c[3]));
+    defparam i3_4_lut.INIT = "0x0400";
+    (* lut_function="(A (B)+!A (B (C+(D))))" *) LUT4 i584_4_lut (.A(count[5]), 
+            .B(count[9]), .C(count[7]), .D(n4_adj_38), .Z(n616));
+    defparam i584_4_lut.INIT = "0xccc8";
+    (* lut_function="(A (B+(C))+!A (B))" *) LUT4 i586_3_lut (.A(count[7]), 
+            .B(count[9]), .C(count[8]), .Z(n618));
+    defparam i586_3_lut.INIT = "0xecec";
+    (* lut_function="(A (B+(C+(D)))+!A (B+(D)))" *) LUT4 i1_4_lut_adj_1 (.A(count[9]), 
+            .B(count[10]), .C(n4_adj_37), .D(n398), .Z(n296));
+    defparam i1_4_lut_adj_1.INIT = "0xffec";
+    (* lut_function="(A (B (C+(D))+!B (C)))" *) LUT4 i1_4_lut_adj_2 (.A(count[17]), 
+            .B(n296), .C(count[16]), .D(n384), .Z(n4_adj_40));
+    defparam i1_4_lut_adj_2.INIT = "0xa8a0";
+    (* lut_function="(A (B (C+(D))+!B (C)))" *) LUT4 i1_4_lut_adj_3 (.A(count[20]), 
+            .B(count[18]), .C(count[19]), .D(n4_adj_40), .Z(n28));
+    defparam i1_4_lut_adj_3.INIT = "0xa8a0";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i7_4_lut (.A(count[1]), .B(count[2]), 
+            .C(count[0]), .D(count[4]), .Z(n17));
+    defparam i7_4_lut.INIT = "0xfffe";
+    (* lut_function="(A (B))" *) LUT4 i2_2_lut (.A(count[20]), .B(n4), .Z(n882));
+    defparam i2_2_lut.INIT = "0x8888";
+    (* lut_function="(A+(B))" *) LUT4 i886_2_lut (.A(count[22]), .B(count[23]), 
+            .Z(n981));
+    defparam i886_2_lut.INIT = "0xeeee";
+    (* lut_function="(!(A (B+(C (D)))+!A (B+(C+!(D)))))" *) LUT4 i2_4_lut (.A(n28), 
+            .B(n981), .C(n42), .D(count[21]), .Z(row_c[1]));
+    defparam i2_4_lut.INIT = "0x0322";
+    (* lut_function="(A (B+(C (D)))+!A (B))" *) LUT4 i608_4_lut (.A(count[11]), 
+            .B(n360), .C(count[10]), .D(n618), .Z(n640));
+    defparam i608_4_lut.INIT = "0xeccc";
+    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_4 (.A(count[15]), .B(count[14]), 
+            .Z(n379));
+    defparam i1_2_lut_adj_4.INIT = "0x8888";
+    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_5 (.A(count[11]), .B(count[12]), 
+            .Z(n398));
+    defparam i1_2_lut_adj_5.INIT = "0xeeee";
+    (* lut_function="(A (B+(C (D)))+!A (B))" *) LUT4 i73_4_lut (.A(n632), 
+            .B(count[17]), .C(count[16]), .D(n379), .Z(n36));
+    defparam i73_4_lut.INIT = "0xeccc";
+    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_6 (.A(count[23]), .B(count[21]), 
+            .Z(n388));
+    defparam i1_2_lut_adj_6.INIT = "0xeeee";
+    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1_4_lut_adj_7 (.A(count[6]), 
+            .B(count[9]), .C(count[8]), .D(count[7]), .Z(n4_adj_39));
+    defparam i1_4_lut_adj_7.INIT = "0xc8c0";
+    (* lut_function="(A+(B+(C)))" *) LUT4 i1_3_lut (.A(n28), .B(count[22]), 
+            .C(n388), .Z(n403));
+    defparam i1_3_lut.INIT = "0xfefe";
+    (* lut_function="(!(A+(B (C)+!B !(D))))" *) LUT4 i1_4_lut_adj_8 (.A(count[23]), 
+            .B(count[22]), .C(n686), .D(n44), .Z(row_c[2]));
+    defparam i1_4_lut_adj_8.INIT = "0x1504";
+    (* lut_function="(A (B+(C (D)))+!A (B))" *) LUT4 i76_4_lut (.A(count[19]), 
+            .B(count[20]), .C(count[18]), .D(n36), .Z(n42));
+    defparam i76_4_lut.INIT = "0xeccc";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i654_4_lut (.A(n678), .B(count[20]), 
+            .C(count[19]), .D(count[21]), .Z(n686));
+    defparam i654_4_lut.INIT = "0xfffe";
+    (* lut_function="(A (B+(C+(D)))+!A (B+(D)))" *) LUT4 i600_4_lut (.A(count[10]), 
+            .B(count[13]), .C(n4_adj_39), .D(n398), .Z(n632));
+    defparam i600_4_lut.INIT = "0xffec";
+    (* lut_function="(A (B (C (D))))" *) LUT4 i900_4_lut (.A(count[16]), .B(count[10]), 
+            .C(count[8]), .D(count[11]), .Z(n995));
+    defparam i900_4_lut.INIT = "0x8000";
+    (* lut_function="(A+((C+(D))+!B))" *) LUT4 i6_4_lut (.A(count[5]), .B(count[7]), 
+            .C(count[3]), .D(count[18]), .Z(n16));
+    defparam i6_4_lut.INIT = "0xfffb";
+    (* lut_function="(!(A (B+((D)+!C))))" *) LUT4 i964_4_lut (.A(n403), .B(n897), 
+            .C(n999), .D(n10), .Z(row_c[0]));
+    defparam i964_4_lut.INIT = "0x5575";
+    (* lut_function="(A+(B+(C)))" *) LUT4 i2_3_lut (.A(count[13]), .B(count[14]), 
+            .C(count[12]), .Z(n360));
+    defparam i2_3_lut.INIT = "0xfefe";
+    (* lut_function="(A (B))" *) LUT4 i162_2_lut (.A(n42), .B(count[21]), 
+            .Z(n44));
+    defparam i162_2_lut.INIT = "0x8888";
+    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1_4_lut_adj_9 (.A(count[5]), 
+            .B(count[8]), .C(count[7]), .D(count[6]), .Z(n4_adj_37));
+    defparam i1_4_lut_adj_9.INIT = "0xc8c0";
+    (* lut_function="(A (B (C (D))))" *) LUT4 i904_3_lut_4_lut (.A(count[15]), 
+            .B(count[17]), .C(n995), .D(count[19]), .Z(n999));
+    defparam i904_3_lut_4_lut.INIT = "0x8000";
+    (* lut_function="(A (B (C)))" *) LUT4 i1_2_lut_3_lut (.A(count[13]), .B(count[15]), 
+            .C(count[14]), .Z(n384));
+    defparam i1_2_lut_3_lut.INIT = "0x8080";
+    (* lut_function="(A (B (C)))" *) LUT4 i2_2_lut_3_lut (.A(count[15]), .B(count[17]), 
+            .C(count[16]), .Z(n375));
+    defparam i2_2_lut_3_lut.INIT = "0x8080";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) \counter(MAX_COUNT=6000000,WIDTH=24)  counting (n429, 
+            {count}, int_osc, n406, n882);
     
 endmodule
 
 //
-// Verilog Description of module \counter(MAX_COUNT=120,WIDTH=8) 
+// Verilog Description of module \counter(MAX_COUNT=6000000,WIDTH=24) 
 //
 
-module \counter(MAX_COUNT=120,WIDTH=8)  (input n177, input int_osc, input n184, 
-            output [3:0]row_c);
+module \counter(MAX_COUNT=6000000,WIDTH=24)  (input n429, output [23:0]count, 
+            input int_osc, input n406, input n882);
     
     (* is_clock=1 *) wire int_osc;
-    wire [7:0]count;
     
-    wire GND_net, VCC_net, n8;
-    wire [7:0]n39;
+    wire GND_net, VCC_net;
+    wire [23:0]n39;
+    wire [23:0]n127;
     
-    wire n643;
-    wire [7:0]n47;
+    wire n781, n4, n789, n1251, n1245, n783, n1248, n785, n1242, 
+        n775, n779, n1236, n777, n1266, n773, n1233, n795, n793, 
+        n1263, n791, n1260, n1257, n787, n1254, n1230, n1239;
     
-    wire n305, n293, n506, n321, n451, n549, n552, n317, n5, 
-        n512, n449, n640, n319, n447, n637, n445, n634, n631;
-    
-    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i7 (.D(n39[7]), 
-            .SP(n184), .CK(int_osc), .SR(n177), .Q(count[7]));
-    defparam counter__i7.REGSET = "RESET";
-    defparam counter__i7.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(!(A+!(B (C))))" *) LUT4 i2_3_lut (.A(count[7]), .B(n8), 
-            .C(count[6]), .Z(row_c[3]));
-    defparam i2_3_lut.INIT = "0x4040";
-    (* lut_function="(A (B))" *) LUT4 i277_2_lut (.A(count[3]), .B(count[4]), 
-            .Z(n293));
-    defparam i277_2_lut.INIT = "0x8888";
-    (* lut_function="(!(A (B ((D)+!C)+!B !(C (D)))+!A (B (C (D))+!B !((D)+!C))))" *) LUT4 i224_4_lut (.A(n305), 
-            .B(n293), .C(count[2]), .D(count[5]), .Z(n8));
-    defparam i224_4_lut.INIT = "0x35c5";
-    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i4 (.D(n512), 
-            .SP(n184), .CK(int_osc), .SR(n177), .Q(count[4]));
-    defparam counter__i4.REGSET = "RESET";
-    defparam counter__i4.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(A (B+(C (D)))+!A (B))" *) LUT4 i304_4_lut (.A(count[2]), 
-            .B(count[5]), .C(count[1]), .D(n293), .Z(n321));
-    defparam i304_4_lut.INIT = "0xeccc";
-    (* lut_function="(A (B (C (D))+!B !(C (D)))+!A ((C (D))+!B))" *) LUT4 i216_4_lut (.A(count[1]), 
-            .B(count[5]), .C(count[3]), .D(count[4]), .Z(n305));
-    defparam i216_4_lut.INIT = "0xd333";
-    FA2 add_11_add_5_9 (.A0(GND_net), .B0(count[7]), .C0(GND_net), .D0(n451), 
-        .CI0(n451), .A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(n643), 
-        .CI1(n643), .CO0(n643), .S0(n47[7]));
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i22 (.D(n39[22]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[22]));
+    defparam counter__i22.REGSET = "RESET";
+    defparam counter__i22.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i21 (.D(n39[21]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[21]));
+    defparam counter__i21.REGSET = "RESET";
+    defparam counter__i21.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!((B)+!A))" *) LUT4 i566_2_lut (.A(n127[1]), .B(n4), 
+            .Z(n39[1]));
+    defparam i566_2_lut.INIT = "0x2222";
+    (* lut_function="(!((B)+!A))" *) LUT4 i565_2_lut (.A(n127[2]), .B(n4), 
+            .Z(n39[2]));
+    defparam i565_2_lut.INIT = "0x2222";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i20 (.D(n39[20]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[20]));
+    defparam counter__i20.REGSET = "RESET";
+    defparam counter__i20.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i19 (.D(n39[19]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[19]));
+    defparam counter__i19.REGSET = "RESET";
+    defparam counter__i19.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i18 (.D(n39[18]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[18]));
+    defparam counter__i18.REGSET = "RESET";
+    defparam counter__i18.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i17 (.D(n39[17]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[17]));
+    defparam counter__i17.REGSET = "RESET";
+    defparam counter__i17.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!((B)+!A))" *) LUT4 i562_2_lut (.A(n127[3]), .B(n4), 
+            .Z(n39[3]));
+    defparam i562_2_lut.INIT = "0x2222";
+    (* lut_function="(!((B)+!A))" *) LUT4 i557_2_lut (.A(n127[4]), .B(n4), 
+            .Z(n39[4]));
+    defparam i557_2_lut.INIT = "0x2222";
+    (* lut_function="(!((B)+!A))" *) LUT4 i470_2_lut (.A(n127[21]), .B(n4), 
+            .Z(n39[21]));
+    defparam i470_2_lut.INIT = "0x2222";
+    FA2 add_11_add_5_13 (.A0(GND_net), .B0(count[11]), .C0(GND_net), .D0(n783), 
+        .CI0(n783), .A1(GND_net), .B1(count[12]), .C1(GND_net), .D1(n1248), 
+        .CI1(n1248), .CO0(n1248), .CO1(n785), .S0(n127[11]), .S1(n127[12]));
+    defparam add_11_add_5_13.INIT0 = "0xc33c";
+    defparam add_11_add_5_13.INIT1 = "0xc33c";
+    (* lut_function="(!((B)+!A))" *) LUT4 i477_2_lut (.A(n127[15]), .B(n4), 
+            .Z(n39[15]));
+    defparam i477_2_lut.INIT = "0x2222";
+    FA2 add_11_add_5_5 (.A0(GND_net), .B0(count[3]), .C0(GND_net), .D0(n775), 
+        .CI0(n775), .A1(GND_net), .B1(count[4]), .C1(GND_net), .D1(n1236), 
+        .CI1(n1236), .CO0(n1236), .CO1(n777), .S0(n127[3]), .S1(n127[4]));
+    defparam add_11_add_5_5.INIT0 = "0xc33c";
+    defparam add_11_add_5_5.INIT1 = "0xc33c";
+    (* lut_function="(!((B)+!A))" *) LUT4 i473_2_lut (.A(n127[18]), .B(n4), 
+            .Z(n39[18]));
+    defparam i473_2_lut.INIT = "0x2222";
+    (* lut_function="(!((B)+!A))" *) LUT4 i468_2_lut (.A(n127[22]), .B(n4), 
+            .Z(n39[22]));
+    defparam i468_2_lut.INIT = "0x2222";
+    FA2 add_11_add_5_11 (.A0(GND_net), .B0(count[9]), .C0(GND_net), .D0(n781), 
+        .CI0(n781), .A1(GND_net), .B1(count[10]), .C1(GND_net), .D1(n1245), 
+        .CI1(n1245), .CO0(n1245), .CO1(n783), .S0(n127[9]), .S1(n127[10]));
+    defparam add_11_add_5_11.INIT0 = "0xc33c";
+    defparam add_11_add_5_11.INIT1 = "0xc33c";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i16 (.D(n39[16]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[16]));
+    defparam counter__i16.REGSET = "RESET";
+    defparam counter__i16.SRMODE = "CE_OVER_LSR";
+    FA2 add_11_add_5_9 (.A0(GND_net), .B0(count[7]), .C0(GND_net), .D0(n779), 
+        .CI0(n779), .A1(GND_net), .B1(count[8]), .C1(GND_net), .D1(n1242), 
+        .CI1(n1242), .CO0(n1242), .CO1(n781), .S0(n127[7]), .S1(n127[8]));
     defparam add_11_add_5_9.INIT0 = "0xc33c";
     defparam add_11_add_5_9.INIT1 = "0xc33c";
-    (* lut_function="(!(A+(B (C (D))+!B (C+!(D)))))" *) LUT4 i1_4_lut (.A(count[7]), 
-            .B(n552), .C(n317), .D(count[6]), .Z(row_c[2]));
-    defparam i1_4_lut.INIT = "0x0544";
-    (* lut_function="(!(A+!(B (C (D))+!B (C+!(D)))))" *) LUT4 i1_4_lut_adj_1 (.A(count[7]), 
-            .B(n321), .C(n549), .D(count[6]), .Z(row_c[0]));
-    defparam i1_4_lut_adj_1.INIT = "0x5011";
-    (* lut_function="(!(A (B (C))+!A (B+!(C))))" *) LUT4 i218_3_lut (.A(count[5]), 
-            .B(n305), .C(count[2]), .Z(n5));
-    defparam i218_3_lut.INIT = "0x3a3a";
-    (* lut_function="(!(A+((C)+!B)))" *) LUT4 i2_3_lut_adj_2 (.A(count[7]), 
-            .B(n5), .C(count[6]), .Z(row_c[1]));
-    defparam i2_3_lut_adj_2.INIT = "0x0404";
-    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i3 (.D(n39[3]), 
-            .SP(n184), .CK(int_osc), .SR(n177), .Q(count[3]));
-    defparam counter__i3.REGSET = "RESET";
-    defparam counter__i3.SRMODE = "CE_OVER_LSR";
-    FA2 add_11_add_5_7 (.A0(GND_net), .B0(count[5]), .C0(GND_net), .D0(n449), 
-        .CI0(n449), .A1(GND_net), .B1(count[6]), .C1(GND_net), .D1(n640), 
-        .CI1(n640), .CO0(n640), .CO1(n451), .S0(n47[5]), .S1(n47[6]));
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i15 (.D(n39[15]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[15]));
+    defparam counter__i15.REGSET = "RESET";
+    defparam counter__i15.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i14 (.D(n39[14]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[14]));
+    defparam counter__i14.REGSET = "RESET";
+    defparam counter__i14.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i0 (.D(n39[0]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[0]));
+    defparam counter__i0.REGSET = "RESET";
+    defparam counter__i0.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i13 (.D(n39[13]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[13]));
+    defparam counter__i13.REGSET = "RESET";
+    defparam counter__i13.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!((B)+!A))" *) LUT4 i472_2_lut (.A(n127[19]), .B(n4), 
+            .Z(n39[19]));
+    defparam i472_2_lut.INIT = "0x2222";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i12 (.D(n39[12]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[12]));
+    defparam counter__i12.REGSET = "RESET";
+    defparam counter__i12.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i11 (.D(n39[11]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[11]));
+    defparam counter__i11.REGSET = "RESET";
+    defparam counter__i11.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!((B)+!A))" *) LUT4 i476_2_lut (.A(n127[16]), .B(n4), 
+            .Z(n39[16]));
+    defparam i476_2_lut.INIT = "0x2222";
+    FA2 add_11_add_5_3 (.A0(GND_net), .B0(count[1]), .C0(GND_net), .D0(n773), 
+        .CI0(n773), .A1(GND_net), .B1(count[2]), .C1(GND_net), .D1(n1233), 
+        .CI1(n1233), .CO0(n1233), .CO1(n775), .S0(n127[1]), .S1(n127[2]));
+    defparam add_11_add_5_3.INIT0 = "0xc33c";
+    defparam add_11_add_5_3.INIT1 = "0xc33c";
+    (* lut_function="(!((B)+!A))" *) LUT4 i471_2_lut (.A(n127[20]), .B(n4), 
+            .Z(n39[20]));
+    defparam i471_2_lut.INIT = "0x2222";
+    FA2 add_11_add_5_23 (.A0(GND_net), .B0(count[21]), .C0(GND_net), .D0(n793), 
+        .CI0(n793), .A1(GND_net), .B1(count[22]), .C1(GND_net), .D1(n1263), 
+        .CI1(n1263), .CO0(n1263), .CO1(n795), .S0(n127[21]), .S1(n127[22]));
+    defparam add_11_add_5_23.INIT0 = "0xc33c";
+    defparam add_11_add_5_23.INIT1 = "0xc33c";
+    (* lut_function="(!((B)+!A))" *) LUT4 i474_2_lut (.A(n127[17]), .B(n4), 
+            .Z(n39[17]));
+    defparam i474_2_lut.INIT = "0x2222";
+    (* lut_function="(A (B+(C))+!A (B+(C (D))))" *) LUT4 i144_4_lut (.A(n882), 
+            .B(count[23]), .C(count[22]), .D(count[21]), .Z(n4));
+    defparam i144_4_lut.INIT = "0xfcec";
+    FA2 add_11_add_5_21 (.A0(GND_net), .B0(count[19]), .C0(GND_net), .D0(n791), 
+        .CI0(n791), .A1(GND_net), .B1(count[20]), .C1(GND_net), .D1(n1260), 
+        .CI1(n1260), .CO0(n1260), .CO1(n793), .S0(n127[19]), .S1(n127[20]));
+    defparam add_11_add_5_21.INIT0 = "0xc33c";
+    defparam add_11_add_5_21.INIT1 = "0xc33c";
+    FA2 add_11_add_5_19 (.A0(GND_net), .B0(count[17]), .C0(GND_net), .D0(n789), 
+        .CI0(n789), .A1(GND_net), .B1(count[18]), .C1(GND_net), .D1(n1257), 
+        .CI1(n1257), .CO0(n1257), .CO1(n791), .S0(n127[17]), .S1(n127[18]));
+    defparam add_11_add_5_19.INIT0 = "0xc33c";
+    defparam add_11_add_5_19.INIT1 = "0xc33c";
+    FA2 add_11_add_5_17 (.A0(GND_net), .B0(count[15]), .C0(GND_net), .D0(n787), 
+        .CI0(n787), .A1(GND_net), .B1(count[16]), .C1(GND_net), .D1(n1254), 
+        .CI1(n1254), .CO0(n1254), .CO1(n789), .S0(n127[15]), .S1(n127[16]));
+    defparam add_11_add_5_17.INIT0 = "0xc33c";
+    defparam add_11_add_5_17.INIT1 = "0xc33c";
+    FA2 add_11_add_5_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), .A1(GND_net), 
+        .B1(count[0]), .C1(VCC_net), .D1(n1230), .CI1(n1230), .CO0(n1230), 
+        .CO1(n773), .S1(n127[0]));
+    defparam add_11_add_5_1.INIT0 = "0xc33c";
+    defparam add_11_add_5_1.INIT1 = "0xc33c";
+    (* lut_function="(!((B)+!A))" *) LUT4 i466_2_lut (.A(n127[23]), .B(n4), 
+            .Z(n39[23]));
+    defparam i466_2_lut.INIT = "0x2222";
+    FA2 add_11_add_5_7 (.A0(GND_net), .B0(count[5]), .C0(GND_net), .D0(n777), 
+        .CI0(n777), .A1(GND_net), .B1(count[6]), .C1(GND_net), .D1(n1239), 
+        .CI1(n1239), .CO0(n1239), .CO1(n779), .S0(n127[5]), .S1(n127[6]));
     defparam add_11_add_5_7.INIT0 = "0xc33c";
     defparam add_11_add_5_7.INIT1 = "0xc33c";
+    (* lut_function="(!((B)+!A))" *) LUT4 i556_2_lut (.A(n127[5]), .B(n4), 
+            .Z(n39[5]));
+    defparam i556_2_lut.INIT = "0x2222";
+    (* lut_function="(!((B)+!A))" *) LUT4 i555_2_lut (.A(n127[6]), .B(n4), 
+            .Z(n39[6]));
+    defparam i555_2_lut.INIT = "0x2222";
+    (* lut_function="(!((B)+!A))" *) LUT4 i552_2_lut (.A(n127[7]), .B(n4), 
+            .Z(n39[7]));
+    defparam i552_2_lut.INIT = "0x2222";
+    (* lut_function="(!((B)+!A))" *) LUT4 i547_2_lut (.A(n127[8]), .B(n4), 
+            .Z(n39[8]));
+    defparam i547_2_lut.INIT = "0x2222";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i10 (.D(n39[10]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[10]));
+    defparam counter__i10.REGSET = "RESET";
+    defparam counter__i10.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i9 (.D(n39[9]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[9]));
+    defparam counter__i9.REGSET = "RESET";
+    defparam counter__i9.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i8 (.D(n39[8]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[8]));
+    defparam counter__i8.REGSET = "RESET";
+    defparam counter__i8.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i7 (.D(n39[7]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[7]));
+    defparam counter__i7.REGSET = "RESET";
+    defparam counter__i7.SRMODE = "CE_OVER_LSR";
+    FA2 add_11_add_5_25 (.A0(GND_net), .B0(count[23]), .C0(GND_net), .D0(n795), 
+        .CI0(n795), .A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(n1266), 
+        .CI1(n1266), .CO0(n1266), .S0(n127[23]));
+    defparam add_11_add_5_25.INIT0 = "0xc33c";
+    defparam add_11_add_5_25.INIT1 = "0xc33c";
+    FA2 add_11_add_5_15 (.A0(GND_net), .B0(count[13]), .C0(GND_net), .D0(n785), 
+        .CI0(n785), .A1(GND_net), .B1(count[14]), .C1(GND_net), .D1(n1251), 
+        .CI1(n1251), .CO0(n1251), .CO1(n787), .S0(n127[13]), .S1(n127[14]));
+    defparam add_11_add_5_15.INIT0 = "0xc33c";
+    defparam add_11_add_5_15.INIT1 = "0xc33c";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i6 (.D(n39[6]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[6]));
+    defparam counter__i6.REGSET = "RESET";
+    defparam counter__i6.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!((B)+!A))" *) LUT4 i546_2_lut (.A(n127[9]), .B(n4), 
+            .Z(n39[9]));
+    defparam i546_2_lut.INIT = "0x2222";
+    (* lut_function="(!((B)+!A))" *) LUT4 i545_2_lut (.A(n127[10]), .B(n4), 
+            .Z(n39[10]));
+    defparam i545_2_lut.INIT = "0x2222";
+    (* lut_function="(!((B)+!A))" *) LUT4 i531_2_lut (.A(n127[11]), .B(n4), 
+            .Z(n39[11]));
+    defparam i531_2_lut.INIT = "0x2222";
+    (* lut_function="(!((B)+!A))" *) LUT4 i519_2_lut (.A(n127[12]), .B(n4), 
+            .Z(n39[12]));
+    defparam i519_2_lut.INIT = "0x2222";
+    (* lut_function="(!((B)+!A))" *) LUT4 i465_2_lut (.A(n127[13]), .B(n4), 
+            .Z(n39[13]));
+    defparam i465_2_lut.INIT = "0x2222";
+    (* lut_function="(!((B)+!A))" *) LUT4 i567_2_lut (.A(n127[0]), .B(n4), 
+            .Z(n39[0]));
+    defparam i567_2_lut.INIT = "0x2222";
+    (* lut_function="(!((B)+!A))" *) LUT4 i480_2_lut (.A(n127[14]), .B(n4), 
+            .Z(n39[14]));
+    defparam i480_2_lut.INIT = "0x2222";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i5 (.D(n39[5]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[5]));
+    defparam counter__i5.REGSET = "RESET";
+    defparam counter__i5.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i4 (.D(n39[4]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[4]));
+    defparam counter__i4.REGSET = "RESET";
+    defparam counter__i4.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i3 (.D(n39[3]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[3]));
+    defparam counter__i3.REGSET = "RESET";
+    defparam counter__i3.SRMODE = "CE_OVER_LSR";
     (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i2 (.D(n39[2]), 
-            .SP(n184), .CK(int_osc), .SR(n177), .Q(count[2]));
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[2]));
     defparam counter__i2.REGSET = "RESET";
     defparam counter__i2.SRMODE = "CE_OVER_LSR";
     (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i1 (.D(n39[1]), 
-            .SP(n184), .CK(int_osc), .SR(n177), .Q(count[1]));
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[1]));
     defparam counter__i1.REGSET = "RESET";
     defparam counter__i1.SRMODE = "CE_OVER_LSR";
-    FA2 add_11_add_5_5 (.A0(GND_net), .B0(count[3]), .C0(GND_net), .D0(n447), 
-        .CI0(n447), .A1(GND_net), .B1(count[4]), .C1(GND_net), .D1(n637), 
-        .CI1(n637), .CO0(n637), .CO1(n449), .S0(n47[3]), .S1(n47[4]));
-    defparam add_11_add_5_5.INIT0 = "0xc33c";
-    defparam add_11_add_5_5.INIT1 = "0xc33c";
-    FA2 add_11_add_5_3 (.A0(GND_net), .B0(count[1]), .C0(GND_net), .D0(n445), 
-        .CI0(n445), .A1(GND_net), .B1(count[2]), .C1(GND_net), .D1(n634), 
-        .CI1(n634), .CO0(n634), .CO1(n447), .S0(n47[1]), .S1(n47[2]));
-    defparam add_11_add_5_3.INIT0 = "0xc33c";
-    defparam add_11_add_5_3.INIT1 = "0xc33c";
-    (* lut_function="(!(A+!(B)))" *) LUT4 i1_2_lut (.A(n319), .B(n47[2]), 
-            .Z(n39[2]));
-    defparam i1_2_lut.INIT = "0x4444";
-    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i5 (.D(n39[5]), 
-            .SP(n184), .CK(int_osc), .SR(n177), .Q(count[5]));
-    defparam counter__i5.REGSET = "RESET";
-    defparam counter__i5.SRMODE = "CE_OVER_LSR";
-    FA2 add_11_add_5_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), .A1(GND_net), 
-        .B1(count[0]), .C1(VCC_net), .D1(n631), .CI1(n631), .CO0(n631), 
-        .CO1(n445), .S1(n47[0]));
-    defparam add_11_add_5_1.INIT0 = "0xc33c";
-    defparam add_11_add_5_1.INIT1 = "0xc33c";
-    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i0 (.D(n39[0]), 
-            .SP(n184), .CK(int_osc), .SR(n177), .Q(count[0]));
-    defparam counter__i0.REGSET = "RESET";
-    defparam counter__i0.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(!(A+!(B)))" *) LUT4 i1_2_lut_adj_3 (.A(n319), .B(n47[3]), 
-            .Z(n39[3]));
-    defparam i1_2_lut_adj_3.INIT = "0x4444";
-    (* lut_function="(!(A+!(B)))" *) LUT4 i1_2_lut_adj_4 (.A(n319), .B(n47[5]), 
-            .Z(n39[5]));
-    defparam i1_2_lut_adj_4.INIT = "0x4444";
-    (* lut_function="(A (B (C)))" *) LUT4 i2_3_lut_adj_5 (.A(count[3]), .B(count[4]), 
-            .C(count[5]), .Z(n506));
-    defparam i2_3_lut_adj_5.INIT = "0x8080";
-    (* lut_function="(!(A+!(B)))" *) LUT4 i1_2_lut_adj_6 (.A(n319), .B(n47[6]), 
-            .Z(n39[6]));
-    defparam i1_2_lut_adj_6.INIT = "0x4444";
     VLO i1 (.Z(GND_net));
-    (* lut_function="(!(A+(B ((D)+!C)+!B !(C))))" *) LUT4 i1_4_lut_adj_7 (.A(count[7]), 
-            .B(n506), .C(n47[4]), .D(count[6]), .Z(n512));
-    defparam i1_4_lut_adj_7.INIT = "0x1050";
-    (* lut_function="(!(A+(B+(C+!(D)))))" *) LUT4 i510_3_lut_4_lut (.A(count[2]), 
-            .B(count[1]), .C(count[0]), .D(n506), .Z(n549));
-    defparam i510_3_lut_4_lut.INIT = "0x0100";
-    (* lut_function="(A (C+(D))+!A (B (C+(D))+!B (D)))" *) LUT4 i300_3_lut_4_lut (.A(count[2]), 
-            .B(count[1]), .C(n293), .D(count[5]), .Z(n317));
-    defparam i300_3_lut_4_lut.INIT = "0xffe0";
-    (* lut_function="(!(A+!(B)))" *) LUT4 i1_2_lut_adj_8 (.A(n319), .B(n47[1]), 
-            .Z(n39[1]));
-    defparam i1_2_lut_adj_8.INIT = "0x4444";
-    (* lut_function="(A (B (C+(D))+!B (C))+!A (C))" *) LUT4 i302_3_lut_4_lut (.A(count[5]), 
-            .B(n293), .C(count[7]), .D(count[6]), .Z(n319));
-    defparam i302_3_lut_4_lut.INIT = "0xf8f0";
-    (* lut_function="(!(A+!(B)))" *) LUT4 i1_2_lut_adj_9 (.A(n319), .B(n47[0]), 
-            .Z(n39[0]));
-    defparam i1_2_lut_adj_9.INIT = "0x4444";
-    (* lut_function="(A (B (C (D))))" *) LUT4 i508_2_lut_3_lut_4_lut (.A(count[5]), 
-            .B(count[3]), .C(count[4]), .D(count[2]), .Z(n552));
-    defparam i508_2_lut_3_lut_4_lut.INIT = "0x8000";
-    (* lut_function="(!(A+!(B)))" *) LUT4 i1_2_lut_adj_10 (.A(n319), .B(n47[7]), 
-            .Z(n39[7]));
-    defparam i1_2_lut_adj_10.INIT = "0x4444";
     VHI i2 (.Z(VCC_net));
-    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i6 (.D(n39[6]), 
-            .SP(n184), .CK(int_osc), .SR(n177), .Q(count[6]));
-    defparam counter__i6.REGSET = "RESET";
-    defparam counter__i6.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=28, LSE_LCOL=29, LSE_RCOL=68, LSE_LLINE=12, LSE_RLINE=12 *) FD1P3XZ counter__i23 (.D(n39[23]), 
+            .SP(n429), .CK(int_osc), .SR(n406), .Q(count[23]));
+    defparam counter__i23.REGSET = "RESET";
+    defparam counter__i23.SRMODE = "CE_OVER_LSR";
     
 endmodule
